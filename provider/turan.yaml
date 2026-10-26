@@ -1,0 +1,61 @@
+identity:
+  author: turan
+  name: turan
+  label:
+    en_US: Turan
+    zh_Hans: Turan 图然
+  description:
+    en_US: Connect your Turan account.
+    zh_Hans: 连接你自己的 Turan 账户。
+  icon: icon.png
+  tags:
+  - image
+  - design
+credentials_for_provider:
+  api_key:
+    type: secret-input
+    required: true
+    label:
+      en_US: Turan API Key
+      zh_Hans: Turan API Key
+    placeholder:
+      en_US: Enter your Turan API Key
+      zh_Hans: 填写你自己的 Turan API Key
+    help:
+      en_US: Get your key from Turan
+      zh_Hans: 在 Turan 获取 Key
+    url: https://turan.design/user-center/api-key
+tools:
+- tools/white_background.yaml
+- tools/product_selling_show.yaml
+- tools/real_to_line_art.yaml
+- tools/line_to_tile_img.yaml
+- tools/line_to_model_img.yaml
+- tools/hot_item_modify.yaml
+- tools/change_color.yaml
+- tools/product_selling_analyze.yaml
+- tools/product_point_four.yaml
+- tools/free_model_img.yaml
+- tools/change_face.yaml
+- tools/change_clothes.yaml
+- tools/digital_human.yaml
+- tools/change_pose.yaml
+- tools/model_split_buyer.yaml
+- tools/series_img_split.yaml
+- tools/model_commute.yaml
+- tools/model_changing_underware.yaml
+- tools/poster_transfer.yaml
+- tools/sports_transfer.yaml
+- tools/showcase_style.yaml
+- tools/brand_main_img.yaml
+- tools/onekey_buyer_show.yaml
+- tools/flat_3d.yaml
+- tools/partial_ai.yaml
+- tools/seamless_pattern_extract.yaml
+- tools/pattern_extract.yaml
+- tools/partial_ai_2.yaml
+- tools/common_product.yaml
+- tools/recover_task_result.yaml
+extra:
+  python:
+    source: provider/turan.py

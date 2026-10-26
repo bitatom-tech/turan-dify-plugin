@@ -1,0 +1,56 @@
+{
+  "workflowCode": "model_changing_underware",
+  "workflowName": "模特换内衣",
+  "outputType": "IMAGE",
+  "avgTaskCostTime": 150,
+  "inputs": [
+    {
+      "formName": "285_____image",
+      "label": "内衣图",
+      "kind": "image",
+      "type": "image",
+      "required": true,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "107_____image",
+      "label": "模特图",
+      "kind": "image",
+      "type": "image",
+      "required": true,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "340_____text",
+      "label": "预设prompt",
+      "kind": "parameter",
+      "type": "textarea",
+      "required": false,
+      "defaultValue": "图1的模特穿上图2的服装，保持整体一致性，光影融合自然，物理效果合理，保留图2衣服的全部细节",
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "341_____text",
+      "label": "提示词",
+      "kind": "parameter",
+      "type": "textarea",
+      "required": false,
+      "defaultValue": "",
+      "description": "null",
+      "placeholder": "如果上传模特全身照，则需要上传全套内衣，否则有极大概率无法过审。提示词可按需填写，如无特别需求可留空"
+    }
+  ],
+  "priceOptions": [
+    {
+      "priceType": "11",
+      "priceTypeLabel": "普通图",
+      "consumeCoins": "14.00",
+      "unit": "燃币"
+    }
+  ]
+}

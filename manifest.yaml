@@ -1,0 +1,41 @@
+version: 0.1.0
+type: plugin
+author: turan
+name: turan
+repo: https://github.com/bitatom-tech/turan-dify-plugin
+contact: https://github.com/bitatom-tech/turan-dify-plugin/issues
+label:
+  en_US: Turan
+  zh_Hans: Turan 图然
+description:
+  en_US: Create product visuals, model styling, patterns and videos with Turan.
+  zh_Hans: 使用图然创作商品图片、模特穿搭、创意场景、图案与视频。
+icon: icon.png
+created_at: '2026-10-21T00:00:00Z'
+resource:
+  memory: 536870912
+  permission:
+    storage:
+      enabled: true
+      size: 10485760
+plugins:
+  tools:
+  - provider/turan.yaml
+meta:
+  version: 0.0.1
+  arch:
+  - amd64
+  - arm64
+  runner:
+    language: python
+    version: '3.12'
+    entrypoint: main
+privacy: PRIVACY.md
+tags:
+- image
+- design
+network:
+  domains:
+  - turan.design
+  - www.turan.design
+  - rh-hk-images.xiaoyaoyou.com

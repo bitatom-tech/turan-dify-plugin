@@ -1,0 +1,182 @@
+{
+  "workflowCode": "brand_main_img",
+  "workflowName": "智绘品宣图",
+  "outputType": "IMAGE",
+  "avgTaskCostTime": 29,
+  "inputs": [
+    {
+      "formName": "7_____image",
+      "label": "产品主颜色图",
+      "kind": "image",
+      "type": "image",
+      "required": true,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "8_____image",
+      "label": "产品&模特图",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "9_____image",
+      "label": "null",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "10_____image",
+      "label": "null",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "11_____image",
+      "label": "null",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "12_____image",
+      "label": "null",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "13_____image",
+      "label": "null",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "14_____image",
+      "label": "null",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "2_____aspectRatio",
+      "label": "尺寸比例",
+      "kind": "parameter",
+      "type": "select",
+      "required": false,
+      "defaultValue": "1:1",
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "2_____resolution",
+      "label": "分辨率",
+      "kind": "parameter",
+      "type": "select",
+      "required": false,
+      "defaultValue": "1k",
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "6_____text",
+      "label": "系统提示词",
+      "kind": "parameter",
+      "type": "textarea",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "这是一套穿搭，仔细分析我上传的产品图，把这张产品图做成一张符合电商标准的高清产品的电商主图，根据产品的颜色、特征、季节和应用场景，100%用文字展现产品核心卖点与细节，中文文字100%清晰可见，没有瑕疵"
+    },
+    {
+      "formName": "15_____text",
+      "label": "场景说明",
+      "kind": "parameter",
+      "type": "textarea",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "16_____text",
+      "label": "模特要求",
+      "kind": "parameter",
+      "type": "textarea",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "17_____text",
+      "label": "适用年龄段",
+      "kind": "parameter",
+      "type": "textarea",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "18_____text",
+      "label": "品牌价格定位",
+      "kind": "parameter",
+      "type": "textarea",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "19_____text",
+      "label": "用户提示词",
+      "kind": "parameter",
+      "type": "textarea",
+      "required": false,
+      "defaultValue": null,
+      "description": "这是一套穿搭，仔细分析我上传的产品图，把这张产品图做成一张符合电商标准的高清产品的电商主图，根据产品的颜色、特征、季节和应用场景，100%用文字展现产品核心卖点与细节，中文文字100%清晰可见，没有瑕疵",
+      "placeholder": "这是一套穿搭，仔细分析我上传的产品图，把这张产品图做成一张符合电商标准的高清产品的电商主图，根据产品的颜色、特征、季节和应用场景，100%用文字展现产品核心卖点与细节，中文文字100%清晰可见，没有瑕疵"
+    }
+  ],
+  "priceOptions": [
+    {
+      "priceType": "11",
+      "priceTypeLabel": "普通图",
+      "consumeCoins": "14.00",
+      "unit": "燃币"
+    },
+    {
+      "priceType": "12",
+      "priceTypeLabel": "高清图",
+      "consumeCoins": "25.00",
+      "unit": "燃币"
+    }
+  ]
+}

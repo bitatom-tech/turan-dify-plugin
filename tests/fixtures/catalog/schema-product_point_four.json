@@ -1,0 +1,142 @@
+{
+  "workflowCode": "product_point_four",
+  "workflowName": "产品细节图",
+  "outputType": "IMAGE",
+  "avgTaskCostTime": 31,
+  "inputs": [
+    {
+      "formName": "1_____image",
+      "label": "产品图",
+      "kind": "image",
+      "type": "image",
+      "required": true,
+      "defaultValue": null,
+      "description": "请上传待分析的产品图片",
+      "placeholder": "null"
+    },
+    {
+      "formName": "2_____image",
+      "label": "图2",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "3_____image",
+      "label": "图3",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "4_____image",
+      "label": "图4",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "5_____image",
+      "label": "图5",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "6_____image",
+      "label": "图6",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "7_____image",
+      "label": "图7",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "8_____image",
+      "label": "图8",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "10_____aspectRatio",
+      "label": "尺寸比例",
+      "kind": "parameter",
+      "type": "select",
+      "required": false,
+      "defaultValue": "1:1",
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "10_____resolution",
+      "label": "分辨率",
+      "kind": "parameter",
+      "type": "select",
+      "required": false,
+      "defaultValue": "4k",
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "14_____text",
+      "label": "系统提示词",
+      "kind": "parameter",
+      "type": "textarea",
+      "required": false,
+      "defaultValue": "",
+      "description": "仔细分析我上传的服装图，记住它的颜色、版型、细节和面料质感，接下来我要你把这件衣服的袖口、底摆、领口、面料质感都展现出来，袖口、底摆、领口、面料质感的特写，白底图，并根据服装各部分的结构展示产品对应的卖点，四宫格,一一对称，文字用中文",
+      "placeholder": "null"
+    },
+    {
+      "formName": "18_____text",
+      "label": "提示词",
+      "kind": "parameter",
+      "type": "textarea",
+      "required": false,
+      "defaultValue": "",
+      "description": "null",
+      "placeholder": "希望展示的卖点，如果没思路可留空"
+    }
+  ],
+  "priceOptions": [
+    {
+      "priceType": "11",
+      "priceTypeLabel": "普通图",
+      "consumeCoins": "14.00",
+      "unit": "燃币"
+    },
+    {
+      "priceType": "12",
+      "priceTypeLabel": "高清图",
+      "consumeCoins": "25.00",
+      "unit": "燃币"
+    }
+  ]
+}

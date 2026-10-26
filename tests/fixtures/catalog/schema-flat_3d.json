@@ -1,0 +1,142 @@
+{
+  "workflowCode": "flat_3d",
+  "workflowName": "平铺转立体",
+  "outputType": "IMAGE",
+  "avgTaskCostTime": 34,
+  "inputs": [
+    {
+      "formName": "7_____image",
+      "label": "原产品图",
+      "kind": "image",
+      "type": "image",
+      "required": true,
+      "defaultValue": null,
+      "description": "上传需要生成立体图的原始产品图",
+      "placeholder": "null"
+    },
+    {
+      "formName": "8_____image",
+      "label": "参考图",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "9_____image",
+      "label": "null",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "10_____image",
+      "label": "null",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "11_____image",
+      "label": "null",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "12_____image",
+      "label": "null",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "13_____image",
+      "label": "null",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "14_____image",
+      "label": "null",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "2_____aspectRatio",
+      "label": "尺寸比例",
+      "kind": "parameter",
+      "type": "select",
+      "required": false,
+      "defaultValue": "1:1",
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "2_____resolution",
+      "label": "分辨率",
+      "kind": "parameter",
+      "type": "select",
+      "required": false,
+      "defaultValue": "1k",
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "6_____text",
+      "label": "系统提示词",
+      "kind": "parameter",
+      "type": "textarea",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "专业电商产品摄影：服装3D体积渲染，幽灵模特效果，隐形模特风格。物品呈现饱满形态，似穿戴状态却无可见人体部位。高品质面料纹理，逼真褶皱与折痕。影棚布光，柔光箱照明，柔和自然阴影，8K分辨率，超写实风格，纯白背景隔离。"
+    },
+    {
+      "formName": "17_____text",
+      "label": "用户提示词",
+      "kind": "parameter",
+      "type": "textarea",
+      "required": false,
+      "defaultValue": null,
+      "description": "专业电商产品摄影：服装3D体积渲染，幽灵模特效果，隐形模特风格。物品呈现饱满形态，似穿戴状态却无可见人体部位。高品质面料纹理，逼真褶皱与折痕。影棚布光，柔光箱照明，柔和自然阴影，8K分辨率，超写实风格，纯白背景隔离。",
+      "placeholder": "专业电商产品摄影：服装3D体积渲染，幽灵模特效果，隐形模特风格。物品呈现饱满形态，似穿戴状态却无可见人体部位。高品质面料纹理，逼真褶皱与折痕。影棚布光，柔光箱照明，柔和自然阴影，8K分辨率，超写实风格，纯白背景隔离。"
+    }
+  ],
+  "priceOptions": [
+    {
+      "priceType": "11",
+      "priceTypeLabel": "普通图",
+      "consumeCoins": "14.00",
+      "unit": "燃币"
+    },
+    {
+      "priceType": "12",
+      "priceTypeLabel": "高清图",
+      "consumeCoins": "25.00",
+      "unit": "燃币"
+    }
+  ]
+}

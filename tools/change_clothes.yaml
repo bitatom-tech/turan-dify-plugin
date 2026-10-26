@@ -1,0 +1,166 @@
+identity:
+  author: turan
+  name: change_clothes
+  label:
+    en_US: Model Tools | Model Outfit Change
+    zh_Hans: 模特工具｜模特换装
+description:
+  human:
+    en_US: Dress a model in a target garment or accessory using product references
+      and fit instructions.
+    zh_Hans: 将目标服装或配饰呈现在模特身上，结合穿戴要求制作商品上身效果图。
+  llm: Dress a model in a target garment or accessory using product references and
+    fit instructions.
+parameters:
+- name: model_image
+  type: file
+  form: llm
+  required: true
+  label:
+    en_US: Original Model Image
+    zh_Hans: 原模特图
+  human_description:
+    en_US: Upload one PNG, JPEG or WebP image, up to 20 MiB.
+    zh_Hans: 上传1张图片，支持PNG/JPEG/WebP，单张最多20MiB。
+  llm_description: Upload one PNG, JPEG or WebP image, up to 20 MiB.
+- name: reference_files
+  type: files
+  form: llm
+  required: false
+  label:
+    en_US: Reference Image (up to 7 images)
+    zh_Hans: 参考图（最多7张）
+  human_description:
+    en_US: Upload zero to 7 reference images in one list. Images are assigned in the
+      displayed order. PNG, JPEG or WebP, up to 20 MiB each.
+    zh_Hans: 在同一个入口上传0至7张图片，按列表顺序对应官网图片位置。只补充一张时上传一张即可。支持PNG/JPEG/WebP，单张最多20MiB。
+  llm_description: Upload zero to 7 reference images in one list. Images are assigned
+    in the displayed order. PNG, JPEG or WebP, up to 20 MiB each.
+  min: 0
+  max: 7
+- name: garment_shape
+  type: string
+  form: llm
+  required: false
+  label:
+    en_US: Garment length and silhouette
+    zh_Hans: 服装长度与廓形
+  human_description:
+    en_US: Optional business instruction, at most 4000 characters.
+    zh_Hans: 可选业务要求，最多4000字符。
+  llm_description: Optional business instruction, at most 4000 characters.
+- name: wearing_reference
+  type: string
+  form: llm
+  required: false
+  label:
+    en_US: Wearing instructions
+    zh_Hans: 穿戴形态要求
+  human_description:
+    en_US: Optional business instruction, at most 4000 characters.
+    zh_Hans: 可选业务要求，最多4000字符。
+  llm_description: Optional business instruction, at most 4000 characters.
+- name: instructions
+  type: string
+  form: llm
+  required: false
+  label:
+    en_US: Additional instructions
+    zh_Hans: 补充处理要求
+  human_description:
+    en_US: Optional business instruction, at most 4000 characters.
+    zh_Hans: 可选业务要求，最多4000字符。
+  llm_description: Optional business instruction, at most 4000 characters.
+- name: aspect_ratio
+  type: string
+  form: llm
+  required: false
+  label:
+    en_US: 'Aspect ratio (default: 1:1)'
+    zh_Hans: 尺寸比例（默认 1:1）
+  human_description:
+    en_US: 'Allowed: 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9, auto (automatic).'
+    zh_Hans: 可填：1:1、2:3、3:2、3:4、4:3、4:5、5:4、9:16、16:9、21:9、auto（自动）。
+  llm_description: 'Allowed: 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9,
+    auto (automatic).'
+  default: '1:1'
+  options:
+  - value: '1:1'
+    label:
+      en_US: '1:1'
+      zh_Hans: '1:1'
+  - value: '2:3'
+    label:
+      en_US: '2:3'
+      zh_Hans: '2:3'
+  - value: '3:2'
+    label:
+      en_US: '3:2'
+      zh_Hans: '3:2'
+  - value: '3:4'
+    label:
+      en_US: '3:4'
+      zh_Hans: '3:4'
+  - value: '4:3'
+    label:
+      en_US: '4:3'
+      zh_Hans: '4:3'
+  - value: '4:5'
+    label:
+      en_US: '4:5'
+      zh_Hans: '4:5'
+  - value: '5:4'
+    label:
+      en_US: '5:4'
+      zh_Hans: '5:4'
+  - value: '9:16'
+    label:
+      en_US: '9:16'
+      zh_Hans: '9:16'
+  - value: '16:9'
+    label:
+      en_US: '16:9'
+      zh_Hans: '16:9'
+  - value: '21:9'
+    label:
+      en_US: '21:9'
+      zh_Hans: '21:9'
+  - value: auto
+    label:
+      en_US: Automatic
+      zh_Hans: 自动比例
+- name: output_spec
+  type: string
+  form: llm
+  required: false
+  label:
+    en_US: 'Specification (default: standard)'
+    zh_Hans: 出图规格（默认 standard）
+  human_description:
+    en_US: 'Allowed: standard (Standard), hd (HD).       Reference prices: Standard: 14 coins; HD: 25 coins (confirmed at submission).'
+    zh_Hans: '可填：standard（普通图）、hd（高清图）。       参考价格：普通图 14 燃币；高清图 25 燃币（以提交时为准）。'
+  llm_description: 'Allowed: standard (Standard), hd (HD).     Reference prices: Standard: 14 coins; HD: 25 coins (confirmed at submission).'
+  default: standard
+  options:
+  - value: standard
+    label:
+      en_US: Standard
+      zh_Hans: 普通图
+  - value: hd
+    label:
+      en_US: HD
+      zh_Hans: 高清图
+output_schema:
+  type: object
+  properties:
+    task_id:
+      type: string
+    workflow_code:
+      type: string
+    status:
+      type: string
+    result_count:
+      type: number
+extra:
+  python:
+    source: tools/change_clothes.py

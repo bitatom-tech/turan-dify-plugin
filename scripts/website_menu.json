@@ -1,0 +1,271 @@
+[
+  {
+    "path": "/workflow/cloth",
+    "hidden": false,
+    "meta": {
+      "title": "设计素材"
+    },
+    "children": [
+      {
+        "path": "white_background",
+        "hidden": false,
+        "meta": {
+          "title": "一键抠图"
+        }
+      },
+      {
+        "path": "product_selling_show",
+        "hidden": false,
+        "meta": {
+          "title": "产品卖点四宫格"
+        }
+      },
+      {
+        "path": "real_to_line_art",
+        "hidden": false,
+        "meta": {
+          "title": "实物转线稿"
+        }
+      },
+      {
+        "path": "line_to_tile_img",
+        "hidden": false,
+        "meta": {
+          "title": "线稿转实物"
+        }
+      },
+      {
+        "path": "line_to_model_img",
+        "hidden": false,
+        "meta": {
+          "title": "线稿转模特"
+        }
+      },
+      {
+        "path": "hot_item_modify",
+        "hidden": false,
+        "meta": {
+          "title": "爆款创款"
+        }
+      },
+      {
+        "path": "change_color",
+        "hidden": false,
+        "meta": {
+          "title": "一键改款色"
+        }
+      },
+      {
+        "path": "product_selling_analyze",
+        "hidden": false,
+        "meta": {
+          "title": "卖点洞察分析"
+        }
+      },
+      {
+        "path": "product_point_four",
+        "hidden": false,
+        "meta": {
+          "title": "产品细节图"
+        }
+      },
+      {
+        "path": "logo_repair",
+        "hidden": false,
+        "meta": {
+          "title": "LOGO修复"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/workflow/model",
+    "hidden": false,
+    "meta": {
+      "title": "模特工具"
+    },
+    "children": [
+      {
+        "path": "free_model_img",
+        "hidden": false,
+        "meta": {
+          "title": "自由模特穿搭"
+        }
+      },
+      {
+        "path": "change_face",
+        "hidden": false,
+        "meta": {
+          "title": "模特换脸"
+        }
+      },
+      {
+        "path": "change_clothes",
+        "hidden": false,
+        "meta": {
+          "title": "模特换装"
+        }
+      },
+      {
+        "path": "digital_human",
+        "hidden": false,
+        "meta": {
+          "title": "AI虚拟模特"
+        }
+      },
+      {
+        "path": "change_pose",
+        "hidden": false,
+        "meta": {
+          "title": "模特换姿势"
+        }
+      },
+      {
+        "path": "model_split_buyer",
+        "hidden": false,
+        "meta": {
+          "title": "模特买家秀"
+        }
+      },
+      {
+        "path": "series_img_split",
+        "hidden": false,
+        "meta": {
+          "title": "系列图衍生"
+        }
+      },
+      {
+        "path": "model_commute",
+        "hidden": false,
+        "meta": {
+          "title": "产品场景穿搭"
+        }
+      },
+      {
+        "path": "model_changing_underware",
+        "hidden": false,
+        "meta": {
+          "title": "模特换内衣"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/workflow/scene",
+    "hidden": false,
+    "meta": {
+      "title": "场景创意"
+    },
+    "children": [
+      {
+        "path": "poster_transfer",
+        "hidden": false,
+        "meta": {
+          "title": "风格海报智绘"
+        }
+      },
+      {
+        "path": "sports_transfer",
+        "hidden": false,
+        "meta": {
+          "title": "运动场景智绘"
+        }
+      },
+      {
+        "path": "auto_styling",
+        "hidden": true,
+        "meta": {
+          "title": "随心穿搭"
+        }
+      },
+      {
+        "path": "onekey_buyer_show",
+        "hidden": false,
+        "meta": {
+          "title": "产品买家秀"
+        }
+      },
+      {
+        "path": "brand_main_img",
+        "hidden": false,
+        "meta": {
+          "title": "智绘品宣图"
+        }
+      },
+      {
+        "path": "showcase_style",
+        "hidden": false,
+        "meta": {
+          "title": "风格克隆"
+        }
+      },
+      {
+        "path": "smart_details_page",
+        "hidden": false,
+        "meta": {
+          "title": "一键详情页"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/workflow/pattern",
+    "hidden": false,
+    "meta": {
+      "title": "图案工具"
+    },
+    "children": [
+      {
+        "path": "flat_3d",
+        "hidden": false,
+        "meta": {
+          "title": "平铺转立体"
+        }
+      },
+      {
+        "path": "partial_ai",
+        "hidden": false,
+        "meta": {
+          "title": "局部重绘"
+        }
+      },
+      {
+        "path": "partial_ai_2",
+        "hidden": false,
+        "meta": {
+          "title": "局部重绘v2"
+        }
+      },
+      {
+        "path": "seamless_pattern_extract",
+        "hidden": false,
+        "meta": {
+          "title": "面料四方连续图案"
+        }
+      },
+      {
+        "path": "pattern_extract",
+        "hidden": false,
+        "meta": {
+          "title": "款内图案提取"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/workflow/video",
+    "hidden": false,
+    "meta": {
+      "title": "视频类"
+    },
+    "children": [
+      {
+        "path": "common_product",
+        "hidden": false,
+        "meta": {
+          "title": "产品视频"
+        }
+      }
+    ]
+  }
+]

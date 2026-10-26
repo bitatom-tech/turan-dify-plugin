@@ -1,0 +1,13 @@
+{
+  "aigc_comfyui_aspect_ratio_gpt": {
+    "source": "User-provided production website dropdown screenshot codex-clipboard-27fbafa1-7e78-4d99-a25f-2ea41344958f.png and confirmation that the clipped first option is empty",
+    "values": ["empty", "1:1", "2:3", "3:2", "4:5", "5:4", "9:16", "16:9"],
+    "default": "empty",
+    "unset_option": "empty"
+  },
+  "aigc_comfyui_aspect_ratio_video": {
+    "source": "User-provided production website product-video dropdown screenshot codex-clipboard-d3839f7f-305b-41e3-a0e8-457af1442eb5.png",
+    "values": ["1:1", "2:3", "3:2", "3:4", "4:3", "9:16", "16:9"],
+    "default": "9:16"
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "workflowCode": "product_selling_analyze",
+  "workflowName": "卖点洞察分析",
+  "outputType": "IMAGE",
+  "avgTaskCostTime": 46,
+  "inputs": [
+    {
+      "formName": "7_____image",
+      "label": "原图",
+      "kind": "image",
+      "type": "image",
+      "required": true,
+      "defaultValue": null,
+      "description": "请上传需要分析的服装图",
+      "placeholder": "null"
+    },
+    {
+      "formName": "8_____image",
+      "label": "细节图",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "请上传更清晰展示的细节图、面料图、背面图等",
+      "placeholder": "null"
+    },
+    {
+      "formName": "9_____image",
+      "label": "null",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "10_____image",
+      "label": "null",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "11_____image",
+      "label": "null",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "12_____image",
+      "label": "null",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "13_____image",
+      "label": "null",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "14_____image",
+      "label": "null",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "24_____aspectRatio",
+      "label": "尺寸比例",
+      "kind": "parameter",
+      "type": "select",
+      "required": false,
+      "defaultValue": "1:1",
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "24_____resolution",
+      "label": "分辨率",
+      "kind": "parameter",
+      "type": "select",
+      "required": false,
+      "defaultValue": "1k",
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "6_____text",
+      "label": "系统提示词",
+      "kind": "parameter",
+      "type": "textarea",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "将产品图的信息卖点提炼出来。返回结构为：卖点名称+卖点描述+卖点标签"
+    },
+    {
+      "formName": "19_____text",
+      "label": "适用年龄段",
+      "kind": "parameter",
+      "type": "textarea",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "20_____text",
+      "label": "品牌价格定位",
+      "kind": "parameter",
+      "type": "textarea",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "21_____text",
+      "label": "面料名称",
+      "kind": "parameter",
+      "type": "textarea",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "22_____text",
+      "label": "用户提示词",
+      "kind": "parameter",
+      "type": "textarea",
+      "required": false,
+      "defaultValue": null,
+      "description": "将产品图的信息卖点提炼出来。返回结构为：卖点名称+卖点描述+卖点标签",
+      "placeholder": "将产品图的信息卖点提炼出来。返回结构为：卖点名称+卖点描述+卖点标签"
+    }
+  ],
+  "priceOptions": [
+    {
+      "priceType": "11",
+      "priceTypeLabel": "普通图",
+      "consumeCoins": "14.00",
+      "unit": "燃币"
+    },
+    {
+      "priceType": "12",
+      "priceTypeLabel": "高清图",
+      "consumeCoins": "25.00",
+      "unit": "燃币"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+identity:
+  author: turan
+  name: recover_task_result
+  label:
+    en_US: Recover existing task result
+    zh_Hans: 恢复任务结果
+description:
+  human:
+    en_US: Retrieve images or video from an existing task ID after an interrupted
+      workflow, without starting a new generation.
+    zh_Hans: 通过已有任务 ID 取回图片或视频，便于工作流异常后恢复结果，无需重新生成。
+  llm: Retrieve images or video from an existing task ID after an interrupted workflow,
+    without starting a new generation.
+parameters:
+- name: task_id
+  type: string
+  form: llm
+  required: true
+  label:
+    en_US: Existing task ID
+    zh_Hans: 已有任务 ID
+  human_description:
+    en_US: Retrieve an existing task without creating or retrying generation. May
+      wait within the eight-minute node budget.
+    zh_Hans: 查询并取回已有任务，最多在节点八分钟预算内等待，不创建或重试生成。
+  llm_description: Retrieve an existing task without creating or retrying generation.
+    May wait within the eight-minute node budget.
+output_schema:
+  type: object
+  properties:
+    task_id:
+      type: string
+    workflow_code:
+      type: string
+    status:
+      type: string
+    result_count:
+      type: number
+extra:
+  python:
+    source: tools/recover_task_result.py

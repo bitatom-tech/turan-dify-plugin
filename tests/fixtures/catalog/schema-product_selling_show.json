@@ -1,0 +1,142 @@
+{
+  "workflowCode": "product_selling_show",
+  "workflowName": "产品卖点四宫格",
+  "outputType": "IMAGE",
+  "avgTaskCostTime": 28,
+  "inputs": [
+    {
+      "formName": "1_____image",
+      "label": "产品原图",
+      "kind": "image",
+      "type": "image",
+      "required": true,
+      "defaultValue": null,
+      "description": "上传含产品卖点和细节的原图",
+      "placeholder": "null"
+    },
+    {
+      "formName": "2_____image",
+      "label": "参考图/细节和局部图",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "上传产品各个角度的图，局部特写图等",
+      "placeholder": "null"
+    },
+    {
+      "formName": "3_____image",
+      "label": "null",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "4_____image",
+      "label": "null",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "5_____image",
+      "label": "null",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "6_____image",
+      "label": "null",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "7_____image",
+      "label": "null",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "8_____image",
+      "label": "null",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "10_____aspectRatio",
+      "label": "尺寸比例",
+      "kind": "parameter",
+      "type": "select",
+      "required": false,
+      "defaultValue": "1:1",
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "10_____resolution",
+      "label": "分辨率",
+      "kind": "parameter",
+      "type": "select",
+      "required": false,
+      "defaultValue": "1k",
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "14_____text",
+      "label": "系统提示词",
+      "kind": "parameter",
+      "type": "textarea",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "仔细分析我上传的服装图，记住它的颜色、版型、细节和面料质感，接下来我要你把这件衣服的袖口、底摆、领口、面料质感都展现出来，袖口、底摆、领口、面料质感的特写，白底图，并根据服装各部分的结构展示产品对应的卖点"
+    },
+    {
+      "formName": "18_____text",
+      "label": "用户提示词",
+      "kind": "parameter",
+      "type": "textarea",
+      "required": false,
+      "defaultValue": null,
+      "description": "仔细分析我上传的服装图，记住它的颜色、版型、细节和面料质感，接下来我要你把这件衣服的袖口、底摆、领口、面料质感都展现出来，袖口、底摆、领口、面料质感的特写，白底图，并根据服装各部分的结构展示产品对应的卖点",
+      "placeholder": "仔细分析我上传的服装图，记住它的颜色、版型、细节和面料质感，接下来我要你把这件衣服的袖口、底摆、领口、面料质感都展现出来，袖口、底摆、领口、面料质感的特写，白底图，并根据服装各部分的结构展示产品对应的卖点"
+    }
+  ],
+  "priceOptions": [
+    {
+      "priceType": "11",
+      "priceTypeLabel": "普通图",
+      "consumeCoins": "14.00",
+      "unit": "燃币"
+    },
+    {
+      "priceType": "12",
+      "priceTypeLabel": "高清图",
+      "consumeCoins": "25.00",
+      "unit": "燃币"
+    }
+  ]
+}

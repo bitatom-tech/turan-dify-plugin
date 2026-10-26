@@ -1,0 +1,6987 @@
+{
+  "white_background": {
+    "workflow_code": "white_background",
+    "name": "一键抠图",
+    "group": "cloth",
+    "category": "设计素材",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "1_____image",
+        "required": true,
+        "label": "原始图",
+        "description": "上传衣服图片、模特图均可，建议细节清晰可见",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "2_____image",
+        "required": false,
+        "label": "细节&背景图",
+        "description": "原始图细节不清楚时上传，也可以上传背面图",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "3_____image",
+        "required": false,
+        "label": "参考图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "4_____image",
+        "required": false,
+        "label": "参考图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "5_____image",
+        "required": false,
+        "label": "参考图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "6_____image",
+        "required": false,
+        "label": "参考图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "7_____image",
+        "required": false,
+        "label": "参考图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "参考图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "10_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "1:1",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "10_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "1k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "17_____background_color",
+        "required": false,
+        "label": "背景色",
+        "description": "",
+        "default": "#ffffff",
+        "kind": "color",
+        "name": "requirement_1",
+        "type": "string"
+      },
+      {
+        "form_name": "14_____text",
+        "required": false,
+        "label": "用户提示词",
+        "description": "对图像中的服装进行精修处理，袖子要展开，确保生成的衣服100%去除褶皱，去除衣架、人手、模特无关等元素，只保留服装本身。去除衣服上的褶皱并修正衣服的版型，保留原有材质，纯色背景",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_2",
+        "type": "string"
+      },
+      {
+        "form_name": "15_____text",
+        "required": false,
+        "label": "展示风格",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_3",
+        "type": "string"
+      },
+      {
+        "form_name": "16_____text",
+        "required": false,
+        "label": "去除部位",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_4",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "原始图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "1_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "参考图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "2_____image",
+            "legacy_parameter": "image_2"
+          },
+          {
+            "form_name": "3_____image",
+            "legacy_parameter": "image_3"
+          },
+          {
+            "form_name": "4_____image",
+            "legacy_parameter": "image_4"
+          },
+          {
+            "form_name": "5_____image",
+            "legacy_parameter": "image_5"
+          },
+          {
+            "form_name": "6_____image",
+            "legacy_parameter": "image_6"
+          },
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "image_7"
+          },
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "image_8"
+          }
+        ]
+      }
+    ]
+  },
+  "product_selling_show": {
+    "workflow_code": "product_selling_show",
+    "name": "产品卖点四宫格",
+    "group": "cloth",
+    "category": "设计素材",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "1_____image",
+        "required": true,
+        "label": "产品原图",
+        "description": "上传含产品卖点和细节的原图",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "2_____image",
+        "required": false,
+        "label": "参考图/细节和局部图",
+        "description": "上传产品各个角度的图，局部特写图等",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "3_____image",
+        "required": false,
+        "label": "参考图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "4_____image",
+        "required": false,
+        "label": "参考图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "5_____image",
+        "required": false,
+        "label": "参考图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "6_____image",
+        "required": false,
+        "label": "参考图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "7_____image",
+        "required": false,
+        "label": "参考图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "参考图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "10_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "1:1",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "10_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "1k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "18_____text",
+        "required": false,
+        "label": "用户提示词",
+        "description": "仔细分析我上传的服装图，记住它的颜色、版型、细节和面料质感，接下来我要你把这件衣服的袖口、底摆、领口、面料质感都展现出来，袖口、底摆、领口、面料质感的特写，白底图，并根据服装各部分的结构展示产品对应的卖点",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "产品原图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "1_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "参考图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "2_____image",
+            "legacy_parameter": "image_2"
+          },
+          {
+            "form_name": "3_____image",
+            "legacy_parameter": "image_3"
+          },
+          {
+            "form_name": "4_____image",
+            "legacy_parameter": "image_4"
+          },
+          {
+            "form_name": "5_____image",
+            "legacy_parameter": "image_5"
+          },
+          {
+            "form_name": "6_____image",
+            "legacy_parameter": "image_6"
+          },
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "image_7"
+          },
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "image_8"
+          }
+        ]
+      }
+    ]
+  },
+  "real_to_line_art": {
+    "workflow_code": "real_to_line_art",
+    "name": "实物转线稿",
+    "group": "cloth",
+    "category": "设计素材",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "1_____image",
+        "required": true,
+        "label": "原图",
+        "description": "请上传服装实物图：模特图，平铺图等，建议细节清晰；",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "2_____image",
+        "required": false,
+        "label": "参考图",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "3_____image",
+        "required": false,
+        "label": "参考图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "4_____image",
+        "required": false,
+        "label": "参考图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "5_____image",
+        "required": false,
+        "label": "参考图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "6_____image",
+        "required": false,
+        "label": "参考图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "7_____image",
+        "required": false,
+        "label": "参考图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "参考图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "10_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "1:1",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "10_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "1k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "15_____text",
+        "required": false,
+        "label": "面料描述",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      },
+      {
+        "form_name": "18_____text",
+        "required": false,
+        "label": "用户提示词",
+        "description": "把图片中的服装转换成平铺并且带颜色的款式线稿图，并根据服装的款式结构用黑色的线条标注对应的名称，衣长和底摆的准确数据需要准确的标注出来，具体到cm。100%保留服装的颜色，按照以上的文字标注在衣服的对应结构上。白底图",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_2",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "原图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "1_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "参考图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "2_____image",
+            "legacy_parameter": "image_2"
+          },
+          {
+            "form_name": "3_____image",
+            "legacy_parameter": "image_3"
+          },
+          {
+            "form_name": "4_____image",
+            "legacy_parameter": "image_4"
+          },
+          {
+            "form_name": "5_____image",
+            "legacy_parameter": "image_5"
+          },
+          {
+            "form_name": "6_____image",
+            "legacy_parameter": "image_6"
+          },
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "image_7"
+          },
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "image_8"
+          }
+        ]
+      }
+    ]
+  },
+  "line_to_tile_img": {
+    "workflow_code": "line_to_tile_img",
+    "name": "线稿转实物",
+    "group": "cloth",
+    "category": "设计素材",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "1_____image",
+        "required": true,
+        "label": "线稿图",
+        "description": "请上传服装线稿图",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "2_____image",
+        "required": false,
+        "label": "材质&辅料图",
+        "description": "请上传材质&辅料图",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "3_____image",
+        "required": false,
+        "label": "参考图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "4_____image",
+        "required": false,
+        "label": "参考图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "5_____image",
+        "required": false,
+        "label": "参考图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "6_____image",
+        "required": false,
+        "label": "参考图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "7_____image",
+        "required": false,
+        "label": "参考图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "参考图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "10_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "1:1",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "10_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "1k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "15_____text",
+        "required": false,
+        "label": "面料描述",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      },
+      {
+        "form_name": "18_____text",
+        "required": false,
+        "label": "用户提示词",
+        "description": "把图片中的服装款式图转换成对应的服装实物图",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_2",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "线稿图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "1_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "参考图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "2_____image",
+            "legacy_parameter": "image_2"
+          },
+          {
+            "form_name": "3_____image",
+            "legacy_parameter": "image_3"
+          },
+          {
+            "form_name": "4_____image",
+            "legacy_parameter": "image_4"
+          },
+          {
+            "form_name": "5_____image",
+            "legacy_parameter": "image_5"
+          },
+          {
+            "form_name": "6_____image",
+            "legacy_parameter": "image_6"
+          },
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "image_7"
+          },
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "image_8"
+          }
+        ]
+      }
+    ]
+  },
+  "line_to_model_img": {
+    "workflow_code": "line_to_model_img",
+    "name": "线稿转模特",
+    "group": "cloth",
+    "category": "设计素材",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "1_____image",
+        "required": true,
+        "label": "线稿图",
+        "description": "请上传需要转实景图的线稿图",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "2_____image",
+        "required": false,
+        "label": "参考图",
+        "description": "可以上传目标模特图，目标场景图，面料和辅料参考图",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "3_____image",
+        "required": false,
+        "label": "参考图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "4_____image",
+        "required": false,
+        "label": "参考图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "5_____image",
+        "required": false,
+        "label": "参考图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "6_____image",
+        "required": false,
+        "label": "参考图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "7_____image",
+        "required": false,
+        "label": "参考图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "参考图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "10_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "1:1",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "10_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "1k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "15_____text",
+        "required": false,
+        "label": "面料描述",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      },
+      {
+        "form_name": "18_____text",
+        "required": false,
+        "label": "用户提示词",
+        "description": "图1是服装线稿图，图2是模特图，把图的服装款式图转换成实物图并穿在图2的模特身上，用商业级广告的布光，",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_2",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "线稿图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "1_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "参考图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "2_____image",
+            "legacy_parameter": "image_2"
+          },
+          {
+            "form_name": "3_____image",
+            "legacy_parameter": "image_3"
+          },
+          {
+            "form_name": "4_____image",
+            "legacy_parameter": "image_4"
+          },
+          {
+            "form_name": "5_____image",
+            "legacy_parameter": "image_5"
+          },
+          {
+            "form_name": "6_____image",
+            "legacy_parameter": "image_6"
+          },
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "image_7"
+          },
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "image_8"
+          }
+        ]
+      }
+    ]
+  },
+  "hot_item_modify": {
+    "workflow_code": "hot_item_modify",
+    "name": "爆款创款",
+    "group": "cloth",
+    "category": "设计素材",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "4_____image",
+        "required": true,
+        "label": "原款式图",
+        "description": "请上传原始爆款图",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "5_____image",
+        "required": false,
+        "label": "目标元素图",
+        "description": "请上传需要融合进原款的细节图，辅料图等",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "6_____image",
+        "required": false,
+        "label": "参考图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "7_____image",
+        "required": false,
+        "label": "参考图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "参考图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "9_____image",
+        "required": false,
+        "label": "参考图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "10_____image",
+        "required": false,
+        "label": "参考图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "11_____image",
+        "required": false,
+        "label": "参考图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "2_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "1:1",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "2_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "1k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "15_____text",
+        "required": false,
+        "label": "去除",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      },
+      {
+        "form_name": "16_____text",
+        "required": false,
+        "label": "强制保留",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_2",
+        "type": "string"
+      },
+      {
+        "form_name": "17_____text",
+        "required": false,
+        "label": "衍生方向",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_3",
+        "type": "string"
+      },
+      {
+        "form_name": "18_____text",
+        "required": false,
+        "label": "用户提示词",
+        "description": "对图1的服装进行改动优化，口袋采用图2的口袋样式",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_4",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "原款式图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "4_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "参考图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "5_____image",
+            "legacy_parameter": "image_2"
+          },
+          {
+            "form_name": "6_____image",
+            "legacy_parameter": "image_3"
+          },
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "image_4"
+          },
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "image_5"
+          },
+          {
+            "form_name": "9_____image",
+            "legacy_parameter": "image_6"
+          },
+          {
+            "form_name": "10_____image",
+            "legacy_parameter": "image_7"
+          },
+          {
+            "form_name": "11_____image",
+            "legacy_parameter": "image_8"
+          }
+        ]
+      }
+    ]
+  },
+  "change_color": {
+    "workflow_code": "change_color",
+    "name": "一键改款色",
+    "group": "cloth",
+    "category": "设计素材",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "7_____image",
+        "required": true,
+        "label": "需改色原始图",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "目标颜色图",
+        "description": "非必选，如果有目标颜色图可以上传",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "2_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "1:1",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "2_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "1k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "17_____颜色",
+        "required": false,
+        "label": "款色",
+        "description": "",
+        "default": "#ffffff",
+        "kind": "color",
+        "name": "requirement_1",
+        "type": "string"
+      },
+      {
+        "form_name": "18_____text",
+        "required": false,
+        "label": "提示词",
+        "description": "修改图中的产品主体颜色",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_2",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "source_image",
+        "label": "需改色原始图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "source_image"
+          }
+        ]
+      },
+      {
+        "name": "color_reference_image",
+        "label": "目标颜色图",
+        "type": "file",
+        "required": false,
+        "max_files": 1,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "color_reference_image"
+          }
+        ]
+      }
+    ]
+  },
+  "product_selling_analyze": {
+    "workflow_code": "product_selling_analyze",
+    "name": "卖点洞察分析",
+    "group": "cloth",
+    "category": "设计素材",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "7_____image",
+        "required": true,
+        "label": "原图",
+        "description": "请上传需要分析的服装图",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "细节图",
+        "description": "请上传更清晰展示的细节图、面料图、背面图等",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "9_____image",
+        "required": false,
+        "label": "参考图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "10_____image",
+        "required": false,
+        "label": "参考图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "11_____image",
+        "required": false,
+        "label": "参考图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "12_____image",
+        "required": false,
+        "label": "参考图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "13_____image",
+        "required": false,
+        "label": "参考图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "14_____image",
+        "required": false,
+        "label": "参考图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "24_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "1:1",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "24_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "1k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "19_____text",
+        "required": false,
+        "label": "适用年龄段",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      },
+      {
+        "form_name": "20_____text",
+        "required": false,
+        "label": "品牌价格定位",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_2",
+        "type": "string"
+      },
+      {
+        "form_name": "21_____text",
+        "required": false,
+        "label": "面料名称",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_3",
+        "type": "string"
+      },
+      {
+        "form_name": "22_____text",
+        "required": false,
+        "label": "用户提示词",
+        "description": "将产品图的信息卖点提炼出来。返回结构为：卖点名称+卖点描述+卖点标签",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_4",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "原图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "参考图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "image_2"
+          },
+          {
+            "form_name": "9_____image",
+            "legacy_parameter": "image_3"
+          },
+          {
+            "form_name": "10_____image",
+            "legacy_parameter": "image_4"
+          },
+          {
+            "form_name": "11_____image",
+            "legacy_parameter": "image_5"
+          },
+          {
+            "form_name": "12_____image",
+            "legacy_parameter": "image_6"
+          },
+          {
+            "form_name": "13_____image",
+            "legacy_parameter": "image_7"
+          },
+          {
+            "form_name": "14_____image",
+            "legacy_parameter": "image_8"
+          }
+        ]
+      }
+    ]
+  },
+  "product_point_four": {
+    "workflow_code": "product_point_four",
+    "name": "产品细节图",
+    "group": "cloth",
+    "category": "设计素材",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "1_____image",
+        "required": true,
+        "label": "产品图",
+        "description": "请上传待分析的产品图片",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "2_____image",
+        "required": false,
+        "label": "图2",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "3_____image",
+        "required": false,
+        "label": "图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "4_____image",
+        "required": false,
+        "label": "图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "5_____image",
+        "required": false,
+        "label": "图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "6_____image",
+        "required": false,
+        "label": "图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "7_____image",
+        "required": false,
+        "label": "图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "10_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "1:1",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "10_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "4k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "18_____text",
+        "required": false,
+        "label": "提示词",
+        "description": "",
+        "default": "",
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "产品图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "1_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "参考图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "2_____image",
+            "legacy_parameter": "image_2"
+          },
+          {
+            "form_name": "3_____image",
+            "legacy_parameter": "image_3"
+          },
+          {
+            "form_name": "4_____image",
+            "legacy_parameter": "image_4"
+          },
+          {
+            "form_name": "5_____image",
+            "legacy_parameter": "image_5"
+          },
+          {
+            "form_name": "6_____image",
+            "legacy_parameter": "image_6"
+          },
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "image_7"
+          },
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "image_8"
+          }
+        ]
+      }
+    ]
+  },
+  "free_model_img": {
+    "workflow_code": "free_model_img",
+    "name": "自由模特穿搭",
+    "group": "model",
+    "category": "模特工具",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "1_____image",
+        "required": true,
+        "label": "原模特图",
+        "description": "建议用目标姿势的图作为原图，以便更好的完成动作迁移",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "3_____image",
+        "required": false,
+        "label": "目标图",
+        "description": "上传模特图、服装图、场景图等",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "4_____image",
+        "required": false,
+        "label": "参考图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "5_____image",
+        "required": false,
+        "label": "参考图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "6_____image",
+        "required": false,
+        "label": "参考图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "7_____image",
+        "required": false,
+        "label": "参考图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "参考图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "9_____image",
+        "required": false,
+        "label": "参考图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "2_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "3:4",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "2_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "1k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "15_____text",
+        "required": false,
+        "label": "脸部角度、表情和眼神方向",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      },
+      {
+        "form_name": "16_____text",
+        "required": false,
+        "label": "发型参考",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_2",
+        "type": "string"
+      },
+      {
+        "form_name": "17_____text",
+        "required": false,
+        "label": "头部配饰",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_3",
+        "type": "string"
+      },
+      {
+        "form_name": "18_____text",
+        "required": false,
+        "label": "服装穿戴形态参考",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_4",
+        "type": "string"
+      },
+      {
+        "form_name": "19_____text",
+        "required": false,
+        "label": "用户提示词",
+        "description": "图1模特的脸替换成图2的",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_5",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "原模特图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "1_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "参考图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "3_____image",
+            "legacy_parameter": "image_2"
+          },
+          {
+            "form_name": "4_____image",
+            "legacy_parameter": "image_3"
+          },
+          {
+            "form_name": "5_____image",
+            "legacy_parameter": "image_4"
+          },
+          {
+            "form_name": "6_____image",
+            "legacy_parameter": "image_5"
+          },
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "image_6"
+          },
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "image_7"
+          },
+          {
+            "form_name": "9_____image",
+            "legacy_parameter": "image_8"
+          }
+        ]
+      }
+    ]
+  },
+  "change_face": {
+    "workflow_code": "change_face",
+    "name": "模特换脸",
+    "group": "model",
+    "category": "模特工具",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "1_____image",
+        "required": true,
+        "label": "人脸参考图",
+        "description": "请上传原始模特图",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "2_____image",
+        "required": false,
+        "label": "被换脸模特及其他图",
+        "description": "请上传要替换的模特图，建议脸部清晰的正面图",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "3_____image",
+        "required": false,
+        "label": "参考图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "4_____image",
+        "required": false,
+        "label": "参考图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "5_____image",
+        "required": false,
+        "label": "参考图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "6_____image",
+        "required": false,
+        "label": "参考图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "7_____image",
+        "required": false,
+        "label": "参考图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "参考图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "19_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "3:4",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "19_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "1k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "15_____text",
+        "required": false,
+        "label": "头部配饰",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      },
+      {
+        "form_name": "16_____text",
+        "required": false,
+        "label": "脸部角度、表情和眼神方向",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_2",
+        "type": "string"
+      },
+      {
+        "form_name": "17_____text",
+        "required": false,
+        "label": "发型参考",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_3",
+        "type": "string"
+      },
+      {
+        "form_name": "18_____text",
+        "required": false,
+        "label": "用户提示词",
+        "description": "把图1的头（脸部特征，发型）换到图2的模特身上，头部比例和图2原头保持一致，头身比例协调，背景、服装,姿势和头的朝向跟图2模特保持一致性，其他不变。",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_4",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "人脸参考图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "1_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "被换脸模特及其他图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "2_____image",
+            "legacy_parameter": "image_2"
+          },
+          {
+            "form_name": "3_____image",
+            "legacy_parameter": "image_3"
+          },
+          {
+            "form_name": "4_____image",
+            "legacy_parameter": "image_4"
+          },
+          {
+            "form_name": "5_____image",
+            "legacy_parameter": "image_5"
+          },
+          {
+            "form_name": "6_____image",
+            "legacy_parameter": "image_6"
+          },
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "image_7"
+          },
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "image_8"
+          }
+        ]
+      }
+    ]
+  },
+  "change_clothes": {
+    "workflow_code": "change_clothes",
+    "name": "模特换装",
+    "group": "model",
+    "category": "模特工具",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "1_____image",
+        "required": true,
+        "label": "原模特图",
+        "description": "请上传原始模特图（未设置生成比例时以原模特图比例生成）",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "2_____image",
+        "required": false,
+        "label": "目标图",
+        "description": "请上传目标服装、配饰图，如果能体现穿戴效果更佳，如果有穿戴形态参考图也可以上传",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "3_____image",
+        "required": false,
+        "label": "参考图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "4_____image",
+        "required": false,
+        "label": "参考图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "5_____image",
+        "required": false,
+        "label": "参考图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "6_____image",
+        "required": false,
+        "label": "参考图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "7_____image",
+        "required": false,
+        "label": "参考图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "参考图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "10_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "1:1",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "10_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "1k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "15_____text",
+        "required": false,
+        "label": "服装长度和廓形",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      },
+      {
+        "form_name": "16_____text",
+        "required": false,
+        "label": "服装穿戴形态参考",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_2",
+        "type": "string"
+      },
+      {
+        "form_name": "17_____text",
+        "required": false,
+        "label": "用户提示词",
+        "description": "把图2的衣服穿在图1的模特身上，保留服装面料纹理质感不变，模特脸上的细节不变服装穿搭保持一致，手指不变形，不改变姿势动作，其他保持不变，提高这张图片的清晰度，超高分辨率，4k，超写实，专业摄影，HDR，",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_3",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "model_image",
+        "label": "原模特图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "1_____image",
+            "legacy_parameter": "model_image"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "参考图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "2_____image",
+            "legacy_parameter": "garment_image"
+          },
+          {
+            "form_name": "3_____image",
+            "legacy_parameter": "reference_images",
+            "legacy_index": 0
+          },
+          {
+            "form_name": "4_____image",
+            "legacy_parameter": "reference_images",
+            "legacy_index": 1
+          },
+          {
+            "form_name": "5_____image",
+            "legacy_parameter": "reference_images",
+            "legacy_index": 2
+          },
+          {
+            "form_name": "6_____image",
+            "legacy_parameter": "reference_images",
+            "legacy_index": 3
+          },
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "reference_images",
+            "legacy_index": 4
+          },
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "reference_images",
+            "legacy_index": 5
+          }
+        ]
+      }
+    ]
+  },
+  "digital_human": {
+    "workflow_code": "digital_human",
+    "name": "AI虚拟模特",
+    "group": "model",
+    "category": "模特工具",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "7_____image",
+        "required": true,
+        "label": "参考模特",
+        "description": "请上传数字人的参考长相图",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "参考图",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "9_____image",
+        "required": false,
+        "label": "参考图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "10_____image",
+        "required": false,
+        "label": "参考图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "11_____image",
+        "required": false,
+        "label": "参考图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "12_____image",
+        "required": false,
+        "label": "参考图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "13_____image",
+        "required": false,
+        "label": "参考图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "14_____image",
+        "required": false,
+        "label": "参考图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "2_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "1:1",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "2_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "1k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "15_____text",
+        "required": false,
+        "label": "年龄",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      },
+      {
+        "form_name": "16_____text",
+        "required": false,
+        "label": "人种",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_2",
+        "type": "string"
+      },
+      {
+        "form_name": "17_____text",
+        "required": false,
+        "label": "展示角度和优化幅度",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_3",
+        "type": "string"
+      },
+      {
+        "form_name": "18_____text",
+        "required": false,
+        "label": "用户提示词",
+        "description": "生成与图中模特近似长相的模特，相似度为60%。脸蛋再精致一些，欧美皮肤。",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_4",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "参考模特",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "参考图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "image_2"
+          },
+          {
+            "form_name": "9_____image",
+            "legacy_parameter": "image_3"
+          },
+          {
+            "form_name": "10_____image",
+            "legacy_parameter": "image_4"
+          },
+          {
+            "form_name": "11_____image",
+            "legacy_parameter": "image_5"
+          },
+          {
+            "form_name": "12_____image",
+            "legacy_parameter": "image_6"
+          },
+          {
+            "form_name": "13_____image",
+            "legacy_parameter": "image_7"
+          },
+          {
+            "form_name": "14_____image",
+            "legacy_parameter": "image_8"
+          }
+        ]
+      }
+    ]
+  },
+  "change_pose": {
+    "workflow_code": "change_pose",
+    "name": "模特换姿势",
+    "group": "model",
+    "category": "模特工具",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "7_____image",
+        "required": true,
+        "label": "原模特图",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "目标姿势图",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "9_____image",
+        "required": false,
+        "label": "参考图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "10_____image",
+        "required": false,
+        "label": "参考图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "11_____image",
+        "required": false,
+        "label": "参考图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "12_____image",
+        "required": false,
+        "label": "参考图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "13_____image",
+        "required": false,
+        "label": "参考图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "14_____image",
+        "required": false,
+        "label": "参考图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "2_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "1:1",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "2_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "1k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "15_____text",
+        "required": false,
+        "label": "去除元素",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      },
+      {
+        "form_name": "16_____text",
+        "required": false,
+        "label": "人物姿势和眼神方向",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_2",
+        "type": "string"
+      },
+      {
+        "form_name": "17_____text",
+        "required": false,
+        "label": "用户提示词",
+        "description": "图1的模特复刻图2的姿势，姿势保持一样，其他保持不变",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_3",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "原模特图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "参考图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "image_2"
+          },
+          {
+            "form_name": "9_____image",
+            "legacy_parameter": "image_3"
+          },
+          {
+            "form_name": "10_____image",
+            "legacy_parameter": "image_4"
+          },
+          {
+            "form_name": "11_____image",
+            "legacy_parameter": "image_5"
+          },
+          {
+            "form_name": "12_____image",
+            "legacy_parameter": "image_6"
+          },
+          {
+            "form_name": "13_____image",
+            "legacy_parameter": "image_7"
+          },
+          {
+            "form_name": "14_____image",
+            "legacy_parameter": "image_8"
+          }
+        ]
+      }
+    ]
+  },
+  "model_split_buyer": {
+    "workflow_code": "model_split_buyer",
+    "name": "模特买家秀",
+    "group": "model",
+    "category": "模特工具",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "1_____image",
+        "required": true,
+        "label": "原模特图",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "2_____image",
+        "required": false,
+        "label": "目标场景图",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "3_____image",
+        "required": false,
+        "label": "参考图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "4_____image",
+        "required": false,
+        "label": "参考图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "5_____image",
+        "required": false,
+        "label": "参考图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "6_____image",
+        "required": false,
+        "label": "参考图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "7_____image",
+        "required": false,
+        "label": "参考图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "参考图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "10_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "1:1",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "10_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "1k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "15_____text",
+        "required": false,
+        "label": "目标场景图",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      },
+      {
+        "form_name": "18_____text",
+        "required": false,
+        "label": "指定场景描述",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_2",
+        "type": "string"
+      },
+      {
+        "form_name": "19_____text",
+        "required": false,
+        "label": "用户提示词",
+        "description": "把模特生成其他的动作，保持人脸，服装一致性，锁定并复现服装的面料颜色、光泽和微观质感，保持面部细节和发型不变，",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_3",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "原模特图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "1_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "参考图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "2_____image",
+            "legacy_parameter": "image_2"
+          },
+          {
+            "form_name": "3_____image",
+            "legacy_parameter": "image_3"
+          },
+          {
+            "form_name": "4_____image",
+            "legacy_parameter": "image_4"
+          },
+          {
+            "form_name": "5_____image",
+            "legacy_parameter": "image_5"
+          },
+          {
+            "form_name": "6_____image",
+            "legacy_parameter": "image_6"
+          },
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "image_7"
+          },
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "image_8"
+          }
+        ]
+      }
+    ]
+  },
+  "series_img_split": {
+    "workflow_code": "series_img_split",
+    "name": "系列图衍生",
+    "group": "model",
+    "category": "模特工具",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "1_____image",
+        "required": true,
+        "label": "裂变原图",
+        "description": "上传需裂变成系列图的模特图母图",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "2_____image",
+        "required": false,
+        "label": "细节&平铺图",
+        "description": "上传更多衣服细节特征图，为了确保模特一致性更高，建议上传模特正面，侧面和45度角图片",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "3_____image",
+        "required": false,
+        "label": "参考图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "4_____image",
+        "required": false,
+        "label": "参考图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "5_____image",
+        "required": false,
+        "label": "参考图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "6_____image",
+        "required": false,
+        "label": "参考图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "7_____image",
+        "required": false,
+        "label": "参考图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "参考图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "10_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "1:1",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "10_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "1k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "15_____text",
+        "required": false,
+        "label": "按原图模特展示范围限定展示",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      },
+      {
+        "form_name": "18_____text",
+        "required": false,
+        "label": "用户提示词",
+        "description": "把这张画图的模特生成其他的姿势动作，锁定并复现服装的面料颜色、光泽和微观质感，保持面部细节和发型不变，",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_2",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "裂变原图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "1_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "参考图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "2_____image",
+            "legacy_parameter": "image_2"
+          },
+          {
+            "form_name": "3_____image",
+            "legacy_parameter": "image_3"
+          },
+          {
+            "form_name": "4_____image",
+            "legacy_parameter": "image_4"
+          },
+          {
+            "form_name": "5_____image",
+            "legacy_parameter": "image_5"
+          },
+          {
+            "form_name": "6_____image",
+            "legacy_parameter": "image_6"
+          },
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "image_7"
+          },
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "image_8"
+          }
+        ]
+      }
+    ]
+  },
+  "model_commute": {
+    "workflow_code": "model_commute",
+    "name": "产品场景穿搭",
+    "group": "model",
+    "category": "模特工具",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "1_____image",
+        "required": true,
+        "label": "原图",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "3_____image",
+        "required": false,
+        "label": "参考图",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "4_____image",
+        "required": false,
+        "label": "参考图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "5_____image",
+        "required": false,
+        "label": "参考图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "6_____image",
+        "required": false,
+        "label": "参考图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "7_____image",
+        "required": false,
+        "label": "参考图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "参考图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "9_____image",
+        "required": false,
+        "label": "参考图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "2_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "1:1",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "2_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "1k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "19_____text",
+        "required": false,
+        "label": "提示词",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      },
+      {
+        "form_name": "20_____text",
+        "required": false,
+        "label": "模特年龄段",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_2",
+        "type": "string"
+      },
+      {
+        "form_name": "21_____text",
+        "required": false,
+        "label": "模特人种",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_3",
+        "type": "string"
+      },
+      {
+        "form_name": "22_____text",
+        "required": false,
+        "label": "场景",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_4",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "原图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "1_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "参考图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "3_____image",
+            "legacy_parameter": "image_2"
+          },
+          {
+            "form_name": "4_____image",
+            "legacy_parameter": "image_3"
+          },
+          {
+            "form_name": "5_____image",
+            "legacy_parameter": "image_4"
+          },
+          {
+            "form_name": "6_____image",
+            "legacy_parameter": "image_5"
+          },
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "image_6"
+          },
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "image_7"
+          },
+          {
+            "form_name": "9_____image",
+            "legacy_parameter": "image_8"
+          }
+        ]
+      }
+    ]
+  },
+  "model_changing_underware": {
+    "workflow_code": "model_changing_underware",
+    "name": "模特换内衣",
+    "group": "model",
+    "category": "模特工具",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "285_____image",
+        "required": true,
+        "label": "内衣图",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "107_____image",
+        "required": true,
+        "label": "模特图",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "341_____text",
+        "required": false,
+        "label": "提示词",
+        "description": "",
+        "default": "",
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "内衣图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "285_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "image_2",
+        "label": "模特图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "107_____image",
+            "legacy_parameter": "image_2"
+          }
+        ]
+      }
+    ]
+  },
+  "poster_transfer": {
+    "workflow_code": "poster_transfer",
+    "name": "风格海报智绘",
+    "group": "scene",
+    "category": "场景创意",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "1_____image",
+        "required": true,
+        "label": "原海报图",
+        "description": "请上传需要迁移复刻的目标海报图",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "2_____image",
+        "required": false,
+        "label": "目标元素图",
+        "description": "请上传需要替换掉海报中元素的目标人或物的图片多张",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "3_____image",
+        "required": false,
+        "label": "参考图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "4_____image",
+        "required": false,
+        "label": "参考图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "5_____image",
+        "required": false,
+        "label": "参考图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "6_____image",
+        "required": false,
+        "label": "参考图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "7_____image",
+        "required": false,
+        "label": "参考图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "参考图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "10_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "1:1",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "10_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "1k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "15_____text",
+        "required": false,
+        "label": "去除元素",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      },
+      {
+        "form_name": "16_____text",
+        "required": false,
+        "label": "人物姿势和眼神方向",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_2",
+        "type": "string"
+      },
+      {
+        "form_name": "17_____text",
+        "required": false,
+        "label": "目标物的展示形式、角度和呈现形态",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_3",
+        "type": "string"
+      },
+      {
+        "form_name": "18_____text",
+        "required": false,
+        "label": "用户提示词",
+        "description": "把图2中的人物迁移到图1中的海报中，保持海报的整体风格不变",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_4",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "poster_image",
+        "label": "原海报图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "1_____image",
+            "legacy_parameter": "poster_image"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "参考图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "2_____image",
+            "legacy_parameter": "target_image"
+          },
+          {
+            "form_name": "3_____image",
+            "legacy_parameter": "reference_images",
+            "legacy_index": 0
+          },
+          {
+            "form_name": "4_____image",
+            "legacy_parameter": "reference_images",
+            "legacy_index": 1
+          },
+          {
+            "form_name": "5_____image",
+            "legacy_parameter": "reference_images",
+            "legacy_index": 2
+          },
+          {
+            "form_name": "6_____image",
+            "legacy_parameter": "reference_images",
+            "legacy_index": 3
+          },
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "reference_images",
+            "legacy_index": 4
+          },
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "reference_images",
+            "legacy_index": 5
+          }
+        ]
+      }
+    ]
+  },
+  "sports_transfer": {
+    "workflow_code": "sports_transfer",
+    "name": "运动场景智绘",
+    "group": "scene",
+    "category": "场景创意",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "7_____image",
+        "required": true,
+        "label": "原户外海报/运动场景图",
+        "description": "请上传需要迁移复刻的户外人物海报或运动场景图",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "目标元素图",
+        "description": "上传需要替换掉原图中元素的目标人或物的图片，可多张",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "9_____image",
+        "required": false,
+        "label": "参考图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "10_____image",
+        "required": false,
+        "label": "参考图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "11_____image",
+        "required": false,
+        "label": "参考图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "12_____image",
+        "required": false,
+        "label": "参考图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "13_____image",
+        "required": false,
+        "label": "参考图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "14_____image",
+        "required": false,
+        "label": "参考图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "2_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "1:1",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "2_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "1k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "15_____text",
+        "required": false,
+        "label": "去除元素",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      },
+      {
+        "form_name": "16_____text",
+        "required": false,
+        "label": "人物姿势和眼神方向",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_2",
+        "type": "string"
+      },
+      {
+        "form_name": "18_____text",
+        "required": false,
+        "label": "目标物的展示形式、角度和呈现形态",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_3",
+        "type": "string"
+      },
+      {
+        "form_name": "19_____text",
+        "required": false,
+        "label": "用户提示词",
+        "description": "把图2的人物替换到图1的场景中，保持图1的姿势",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_4",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "原户外海报/运动场景图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "参考图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "image_2"
+          },
+          {
+            "form_name": "9_____image",
+            "legacy_parameter": "image_3"
+          },
+          {
+            "form_name": "10_____image",
+            "legacy_parameter": "image_4"
+          },
+          {
+            "form_name": "11_____image",
+            "legacy_parameter": "image_5"
+          },
+          {
+            "form_name": "12_____image",
+            "legacy_parameter": "image_6"
+          },
+          {
+            "form_name": "13_____image",
+            "legacy_parameter": "image_7"
+          },
+          {
+            "form_name": "14_____image",
+            "legacy_parameter": "image_8"
+          }
+        ]
+      }
+    ]
+  },
+  "showcase_style": {
+    "workflow_code": "showcase_style",
+    "name": "风格克隆",
+    "group": "scene",
+    "category": "场景创意",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "7_____image",
+        "required": true,
+        "label": "原图",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "参考图",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "9_____image",
+        "required": false,
+        "label": "参考图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "10_____image",
+        "required": false,
+        "label": "参考图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "11_____image",
+        "required": false,
+        "label": "参考图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "12_____image",
+        "required": false,
+        "label": "参考图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "13_____image",
+        "required": false,
+        "label": "参考图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "14_____image",
+        "required": false,
+        "label": "参考图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "2_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "1:1",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "2_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "1k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "16_____text",
+        "required": false,
+        "label": "用户提示词",
+        "description": "图1的产品以图2的展示形态展示",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "原图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "参考图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "image_2"
+          },
+          {
+            "form_name": "9_____image",
+            "legacy_parameter": "image_3"
+          },
+          {
+            "form_name": "10_____image",
+            "legacy_parameter": "image_4"
+          },
+          {
+            "form_name": "11_____image",
+            "legacy_parameter": "image_5"
+          },
+          {
+            "form_name": "12_____image",
+            "legacy_parameter": "image_6"
+          },
+          {
+            "form_name": "13_____image",
+            "legacy_parameter": "image_7"
+          },
+          {
+            "form_name": "14_____image",
+            "legacy_parameter": "image_8"
+          }
+        ]
+      }
+    ]
+  },
+  "brand_main_img": {
+    "workflow_code": "brand_main_img",
+    "name": "智绘品宣图",
+    "group": "scene",
+    "category": "场景创意",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "7_____image",
+        "required": true,
+        "label": "产品主颜色图",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "产品&模特图",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "9_____image",
+        "required": false,
+        "label": "参考图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "10_____image",
+        "required": false,
+        "label": "参考图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "11_____image",
+        "required": false,
+        "label": "参考图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "12_____image",
+        "required": false,
+        "label": "参考图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "13_____image",
+        "required": false,
+        "label": "参考图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "14_____image",
+        "required": false,
+        "label": "参考图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "2_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "1:1",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "2_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "1k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "15_____text",
+        "required": false,
+        "label": "场景说明",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      },
+      {
+        "form_name": "16_____text",
+        "required": false,
+        "label": "模特要求",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_2",
+        "type": "string"
+      },
+      {
+        "form_name": "17_____text",
+        "required": false,
+        "label": "适用年龄段",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_3",
+        "type": "string"
+      },
+      {
+        "form_name": "18_____text",
+        "required": false,
+        "label": "品牌价格定位",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_4",
+        "type": "string"
+      },
+      {
+        "form_name": "19_____text",
+        "required": false,
+        "label": "用户提示词",
+        "description": "这是一套穿搭，仔细分析我上传的产品图，把这张产品图做成一张符合电商标准的高清产品的电商主图，根据产品的颜色、特征、季节和应用场景，100%用文字展现产品核心卖点与细节，中文文字100%清晰可见，没有瑕疵",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_5",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "产品主颜色图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "参考图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "image_2"
+          },
+          {
+            "form_name": "9_____image",
+            "legacy_parameter": "image_3"
+          },
+          {
+            "form_name": "10_____image",
+            "legacy_parameter": "image_4"
+          },
+          {
+            "form_name": "11_____image",
+            "legacy_parameter": "image_5"
+          },
+          {
+            "form_name": "12_____image",
+            "legacy_parameter": "image_6"
+          },
+          {
+            "form_name": "13_____image",
+            "legacy_parameter": "image_7"
+          },
+          {
+            "form_name": "14_____image",
+            "legacy_parameter": "image_8"
+          }
+        ]
+      }
+    ]
+  },
+  "onekey_buyer_show": {
+    "workflow_code": "onekey_buyer_show",
+    "name": "产品买家秀",
+    "group": "scene",
+    "category": "场景创意",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "1_____image",
+        "required": true,
+        "label": "原产品图",
+        "description": "上传单产品平铺图，或者一整套服装平铺图，或者模特图",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "2_____image",
+        "required": false,
+        "label": "参考图",
+        "description": "上传模特图可选，细节图可选",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "3_____image",
+        "required": false,
+        "label": "参考图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "4_____image",
+        "required": false,
+        "label": "参考图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "5_____image",
+        "required": false,
+        "label": "参考图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "6_____image",
+        "required": false,
+        "label": "参考图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "7_____image",
+        "required": false,
+        "label": "参考图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "参考图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "10_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "1:1",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "10_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "1k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "15_____text",
+        "required": false,
+        "label": "场景要求",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      },
+      {
+        "form_name": "18_____text",
+        "required": false,
+        "label": "模特特征",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_2",
+        "type": "string"
+      },
+      {
+        "form_name": "19_____text",
+        "required": false,
+        "label": "模特数量",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_3",
+        "type": "string"
+      },
+      {
+        "form_name": "20_____text",
+        "required": false,
+        "label": "适用年龄段",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_4",
+        "type": "string"
+      },
+      {
+        "form_name": "21_____text",
+        "required": false,
+        "label": "品牌价格定位",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_5",
+        "type": "string"
+      },
+      {
+        "form_name": "23_____text",
+        "required": false,
+        "label": "用户提示词",
+        "description": "把这件衣服穿在一个模特身上，设计成产品的买家秀，",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_6",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "原产品图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "1_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "参考图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "2_____image",
+            "legacy_parameter": "image_2"
+          },
+          {
+            "form_name": "3_____image",
+            "legacy_parameter": "image_3"
+          },
+          {
+            "form_name": "4_____image",
+            "legacy_parameter": "image_4"
+          },
+          {
+            "form_name": "5_____image",
+            "legacy_parameter": "image_5"
+          },
+          {
+            "form_name": "6_____image",
+            "legacy_parameter": "image_6"
+          },
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "image_7"
+          },
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "image_8"
+          }
+        ]
+      }
+    ]
+  },
+  "flat_3d": {
+    "workflow_code": "flat_3d",
+    "name": "平铺转立体",
+    "group": "pattern",
+    "category": "图案工具",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "7_____image",
+        "required": true,
+        "label": "原产品图",
+        "description": "上传需要生成立体图的原始产品图",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "参考图",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "9_____image",
+        "required": false,
+        "label": "参考图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "10_____image",
+        "required": false,
+        "label": "参考图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "11_____image",
+        "required": false,
+        "label": "参考图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "12_____image",
+        "required": false,
+        "label": "参考图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "13_____image",
+        "required": false,
+        "label": "参考图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "14_____image",
+        "required": false,
+        "label": "参考图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "2_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "1:1",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "2_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "1k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "17_____text",
+        "required": false,
+        "label": "用户提示词",
+        "description": "专业电商产品摄影：服装3D体积渲染，幽灵模特效果，隐形模特风格。物品呈现饱满形态，似穿戴状态却无可见人体部位。高品质面料纹理，逼真褶皱与折痕。影棚布光，柔光箱照明，柔和自然阴影，8K分辨率，超写实风格，纯白背景隔离。",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "原产品图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "参考图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "image_2"
+          },
+          {
+            "form_name": "9_____image",
+            "legacy_parameter": "image_3"
+          },
+          {
+            "form_name": "10_____image",
+            "legacy_parameter": "image_4"
+          },
+          {
+            "form_name": "11_____image",
+            "legacy_parameter": "image_5"
+          },
+          {
+            "form_name": "12_____image",
+            "legacy_parameter": "image_6"
+          },
+          {
+            "form_name": "13_____image",
+            "legacy_parameter": "image_7"
+          },
+          {
+            "form_name": "14_____image",
+            "legacy_parameter": "image_8"
+          }
+        ]
+      }
+    ]
+  },
+  "partial_ai": {
+    "workflow_code": "partial_ai",
+    "name": "局部重绘",
+    "group": "pattern",
+    "category": "图案工具",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "7_____image",
+        "required": true,
+        "label": "原图",
+        "description": "上传需要局部编辑的图片",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "目标元素图",
+        "description": "如果要完成目标元素替换操作时，可以上传目标元素",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "9_____image",
+        "required": false,
+        "label": "参考图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "10_____image",
+        "required": false,
+        "label": "参考图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "11_____image",
+        "required": false,
+        "label": "参考图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "12_____image",
+        "required": false,
+        "label": "参考图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "13_____image",
+        "required": false,
+        "label": "参考图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "14_____image",
+        "required": false,
+        "label": "参考图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "2_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "1:1",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "2_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "1k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "15_____text",
+        "required": false,
+        "label": "用户提示词",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "原图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "参考图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "image_2"
+          },
+          {
+            "form_name": "9_____image",
+            "legacy_parameter": "image_3"
+          },
+          {
+            "form_name": "10_____image",
+            "legacy_parameter": "image_4"
+          },
+          {
+            "form_name": "11_____image",
+            "legacy_parameter": "image_5"
+          },
+          {
+            "form_name": "12_____image",
+            "legacy_parameter": "image_6"
+          },
+          {
+            "form_name": "13_____image",
+            "legacy_parameter": "image_7"
+          },
+          {
+            "form_name": "14_____image",
+            "legacy_parameter": "image_8"
+          }
+        ]
+      }
+    ]
+  },
+  "seamless_pattern_extract": {
+    "workflow_code": "seamless_pattern_extract",
+    "name": "面料四方连续图案",
+    "group": "pattern",
+    "category": "图案工具",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "1_____image",
+        "required": true,
+        "label": "含图案原图",
+        "description": "请上传需要提取图案的原始图片，需能看清图案",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "2_____image",
+        "required": false,
+        "label": "参考图",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "3_____image",
+        "required": false,
+        "label": "参考图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "4_____image",
+        "required": false,
+        "label": "参考图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "5_____image",
+        "required": false,
+        "label": "参考图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "6_____image",
+        "required": false,
+        "label": "参考图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "7_____image",
+        "required": false,
+        "label": "参考图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "参考图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "10_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "1:1",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "10_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "1k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "15_____text",
+        "required": false,
+        "label": "面料描述",
+        "description": "",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      },
+      {
+        "form_name": "18_____text",
+        "required": false,
+        "label": "用户提示词",
+        "description": "提取图中的图案",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_2",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "含图案原图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "1_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "参考图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "2_____image",
+            "legacy_parameter": "image_2"
+          },
+          {
+            "form_name": "3_____image",
+            "legacy_parameter": "image_3"
+          },
+          {
+            "form_name": "4_____image",
+            "legacy_parameter": "image_4"
+          },
+          {
+            "form_name": "5_____image",
+            "legacy_parameter": "image_5"
+          },
+          {
+            "form_name": "6_____image",
+            "legacy_parameter": "image_6"
+          },
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "image_7"
+          },
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "image_8"
+          }
+        ]
+      }
+    ]
+  },
+  "pattern_extract": {
+    "workflow_code": "pattern_extract",
+    "name": "款内图案提取",
+    "group": "pattern",
+    "category": "图案工具",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "1_____image",
+        "required": true,
+        "label": "原图",
+        "description": "上传需要提取元素的原图",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "2_____image",
+        "required": false,
+        "label": "参考图",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "3_____image",
+        "required": false,
+        "label": "参考图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "4_____image",
+        "required": false,
+        "label": "参考图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "5_____image",
+        "required": false,
+        "label": "参考图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "6_____image",
+        "required": false,
+        "label": "参考图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "7_____image",
+        "required": false,
+        "label": "参考图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "参考图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "21_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "",
+        "default": "3:4",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "21:9",
+            "label": "21:9"
+          },
+          {
+            "value": "auto",
+            "label": "auto"
+          }
+        ]
+      },
+      {
+        "form_name": "21_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "1k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      },
+      {
+        "form_name": "18_____text",
+        "required": false,
+        "label": "用户提示词",
+        "description": "提取衣服上的图案，不需要衣服，只需要图案，白底图",
+        "default": null,
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "原图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "1_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "参考图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "2_____image",
+            "legacy_parameter": "image_2"
+          },
+          {
+            "form_name": "3_____image",
+            "legacy_parameter": "image_3"
+          },
+          {
+            "form_name": "4_____image",
+            "legacy_parameter": "image_4"
+          },
+          {
+            "form_name": "5_____image",
+            "legacy_parameter": "image_5"
+          },
+          {
+            "form_name": "6_____image",
+            "legacy_parameter": "image_6"
+          },
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "image_7"
+          },
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "image_8"
+          }
+        ]
+      }
+    ]
+  },
+  "partial_ai_2": {
+    "workflow_code": "partial_ai_2",
+    "name": "局部重绘v2",
+    "group": "pattern",
+    "category": "图案工具",
+    "output_type": "IMAGE",
+    "fields": [
+      {
+        "form_name": "7_____image",
+        "required": true,
+        "label": "原图",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "参考图",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "9_____image",
+        "required": false,
+        "label": "图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "10_____image",
+        "required": false,
+        "label": "参考图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "11_____image",
+        "required": false,
+        "label": "图5",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_5",
+        "type": "file"
+      },
+      {
+        "form_name": "12_____image",
+        "required": false,
+        "label": "参考图6",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_6",
+        "type": "file"
+      },
+      {
+        "form_name": "13_____image",
+        "required": false,
+        "label": "参考图7",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_7",
+        "type": "file"
+      },
+      {
+        "form_name": "14_____image",
+        "required": false,
+        "label": "参考图8",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_8",
+        "type": "file"
+      },
+      {
+        "form_name": "15_____text",
+        "required": true,
+        "label": "用户提示词",
+        "description": "",
+        "default": "",
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      },
+      {
+        "form_name": "16_____aspectRatio",
+        "required": false,
+        "label": "尺寸比例",
+        "description": "选择尺寸比例；empty 表示不指定比例，由图然处理。",
+        "default": "empty",
+        "kind": "select",
+        "name": "aspect_ratio",
+        "type": "select",
+        "options": [
+          {
+            "value": "empty",
+            "label": "empty"
+          },
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "4:5",
+            "label": "4:5"
+          },
+          {
+            "value": "5:4",
+            "label": "5:4"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          }
+        ],
+        "unset_option": "empty"
+      },
+      {
+        "form_name": "16_____resolution",
+        "required": false,
+        "label": "分辨率",
+        "description": "",
+        "default": "2k",
+        "kind": "select",
+        "name": "resolution",
+        "type": "resolution"
+      }
+    ],
+    "prices": [
+      {
+        "value": "普通图",
+        "price_type": "11",
+        "coins": "14.00",
+        "resolution": "2k"
+      },
+      {
+        "value": "高清图",
+        "price_type": "12",
+        "coins": "25.00",
+        "resolution": "4k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "原图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "参考图",
+        "type": "files",
+        "required": false,
+        "max_files": 7,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "image_2"
+          },
+          {
+            "form_name": "9_____image",
+            "legacy_parameter": "image_3"
+          },
+          {
+            "form_name": "10_____image",
+            "legacy_parameter": "image_4"
+          },
+          {
+            "form_name": "11_____image",
+            "legacy_parameter": "image_5"
+          },
+          {
+            "form_name": "12_____image",
+            "legacy_parameter": "image_6"
+          },
+          {
+            "form_name": "13_____image",
+            "legacy_parameter": "image_7"
+          },
+          {
+            "form_name": "14_____image",
+            "legacy_parameter": "image_8"
+          }
+        ]
+      }
+    ]
+  },
+  "common_product": {
+    "workflow_code": "common_product",
+    "name": "产品视频",
+    "group": "video",
+    "category": "视频类",
+    "output_type": "VIDEO",
+    "fields": [
+      {
+        "form_name": "7_____image",
+        "required": true,
+        "label": "产品主图",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_1",
+        "type": "file"
+      },
+      {
+        "form_name": "8_____image",
+        "required": false,
+        "label": "补充图",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_2",
+        "type": "file"
+      },
+      {
+        "form_name": "9_____image",
+        "required": false,
+        "label": "图3",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_3",
+        "type": "file"
+      },
+      {
+        "form_name": "10_____image",
+        "required": false,
+        "label": "图4",
+        "description": "",
+        "default": null,
+        "kind": "upload",
+        "name": "image_4",
+        "type": "file"
+      },
+      {
+        "form_name": "16_____text",
+        "required": true,
+        "label": "提示词",
+        "description": "",
+        "default": "生成宣传视频",
+        "kind": "textarea",
+        "name": "requirement_1",
+        "type": "string"
+      },
+      {
+        "form_name": "20_____text",
+        "required": true,
+        "label": "生成视频秒数",
+        "description": "图然页面已确认：6、10、15、20、25、30秒。参考6燃币／秒，提交前实时核价。",
+        "default": "10",
+        "kind": "video_duration",
+        "name": "duration_seconds",
+        "type": "select",
+        "options": [
+          {
+            "value": "6",
+            "label": "6秒"
+          },
+          {
+            "value": "10",
+            "label": "10秒"
+          },
+          {
+            "value": "15",
+            "label": "15秒"
+          },
+          {
+            "value": "20",
+            "label": "20秒"
+          },
+          {
+            "value": "25",
+            "label": "25秒"
+          },
+          {
+            "value": "30",
+            "label": "30秒"
+          }
+        ]
+      },
+      {
+        "form_name": "42_____text",
+        "required": true,
+        "label": "生成视频比例",
+        "description": "",
+        "default": "9:16",
+        "kind": "select",
+        "name": "requirement_2",
+        "type": "select",
+        "options": [
+          {
+            "value": "1:1",
+            "label": "1:1"
+          },
+          {
+            "value": "2:3",
+            "label": "2:3"
+          },
+          {
+            "value": "3:2",
+            "label": "3:2"
+          },
+          {
+            "value": "3:4",
+            "label": "3:4"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          },
+          {
+            "value": "9:16",
+            "label": "9:16"
+          },
+          {
+            "value": "16:9",
+            "label": "16:9"
+          }
+        ]
+      }
+    ],
+    "prices": [
+      {
+        "value": "视频",
+        "price_type": "21",
+        "coins": "6.00",
+        "resolution": "2k"
+      }
+    ],
+    "checked_on": "2026-10-22",
+    "image_inputs": [
+      {
+        "name": "image_1",
+        "label": "产品主图",
+        "type": "file",
+        "required": true,
+        "max_files": 1,
+        "min_files": 1,
+        "members": [
+          {
+            "form_name": "7_____image",
+            "legacy_parameter": "image_1"
+          }
+        ]
+      },
+      {
+        "name": "reference_files",
+        "label": "补充图",
+        "type": "files",
+        "required": false,
+        "max_files": 3,
+        "min_files": 0,
+        "members": [
+          {
+            "form_name": "8_____image",
+            "legacy_parameter": "image_2"
+          },
+          {
+            "form_name": "9_____image",
+            "legacy_parameter": "image_3"
+          },
+          {
+            "form_name": "10_____image",
+            "legacy_parameter": "image_4"
+          }
+        ]
+      }
+    ]
+  }
+}

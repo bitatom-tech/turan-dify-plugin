@@ -1,0 +1,86 @@
+{
+  "workflowCode": "common_product",
+  "workflowName": "产品生成视频",
+  "outputType": "VIDEO",
+  "avgTaskCostTime": 200,
+  "inputs": [
+    {
+      "formName": "7_____image",
+      "label": "产品主图",
+      "kind": "image",
+      "type": "image",
+      "required": true,
+      "defaultValue": null,
+      "description": "",
+      "placeholder": ""
+    },
+    {
+      "formName": "8_____image",
+      "label": "补充图",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "",
+      "placeholder": ""
+    },
+    {
+      "formName": "9_____image",
+      "label": "图3",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "",
+      "placeholder": ""
+    },
+    {
+      "formName": "10_____image",
+      "label": "图4",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "",
+      "placeholder": ""
+    },
+    {
+      "formName": "16_____text",
+      "label": "提示词",
+      "kind": "parameter",
+      "type": "textarea",
+      "required": true,
+      "defaultValue": "生成宣传视频",
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "20_____text",
+      "label": "生成视频秒数",
+      "kind": "parameter",
+      "type": "video_duration",
+      "required": true,
+      "defaultValue": "10",
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "42_____text",
+      "label": "生成视频比例",
+      "kind": "parameter",
+      "type": "select",
+      "required": true,
+      "defaultValue": "9:16",
+      "description": "null",
+      "placeholder": "null"
+    }
+  ],
+  "priceOptions": [
+    {
+      "priceType": "21",
+      "priceTypeLabel": "视频每秒",
+      "consumeCoins": "6.00",
+      "unit": "燃币"
+    }
+  ]
+}

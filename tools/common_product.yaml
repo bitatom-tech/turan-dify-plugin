@@ -1,0 +1,165 @@
+identity:
+  author: turan
+  name: common_product
+  label:
+    en_US: Video | Product Video Generation
+    zh_Hans: 视频类｜产品视频
+description:
+  human:
+    en_US: Turn product images into video with motion instructions, duration and aspect-ratio
+      controls.
+    zh_Hans: 将产品图片转为动态展示视频，结合动作描述、时长与比例要求，制作商品宣传素材。
+  llm: Turn product images into video with motion instructions, duration and aspect-ratio
+    controls.
+parameters:
+- name: image_1
+  type: file
+  form: llm
+  required: true
+  label:
+    en_US: Main Product Image
+    zh_Hans: 产品主图
+  human_description:
+    en_US: Upload one PNG, JPEG or WebP image, up to 20 MiB.
+    zh_Hans: 上传1张图片，支持PNG/JPEG/WebP，单张最多20MiB。
+  llm_description: Upload one PNG, JPEG or WebP image, up to 20 MiB.
+- name: reference_files
+  type: files
+  form: llm
+  required: false
+  label:
+    en_US: Additional Reference Image (up to 3 images)
+    zh_Hans: 补充图（最多3张）
+  human_description:
+    en_US: Upload zero to 3 reference images in one list. Images are assigned in the
+      displayed order. PNG, JPEG or WebP, up to 20 MiB each.
+    zh_Hans: 在同一个入口上传0至3张图片，按列表顺序对应官网图片位置。只补充一张时上传一张即可。支持PNG/JPEG/WebP，单张最多20MiB。
+  llm_description: Upload zero to 3 reference images in one list. Images are assigned
+    in the displayed order. PNG, JPEG or WebP, up to 20 MiB each.
+  min: 0
+  max: 3
+- name: requirement_1
+  type: string
+  form: llm
+  required: true
+  label:
+    en_US: Prompt
+    zh_Hans: 提示词
+  human_description:
+    en_US: Describe your preferences for prompt. Keep the default or customize it
+      to suit your project.
+    zh_Hans: 根据创作需求填写，可保留默认值或自行调整。
+  llm_description: Describe your preferences for prompt. Keep the default or customize
+    it to suit your project.
+  default: 生成宣传视频
+- name: duration_seconds
+  type: select
+  form: llm
+  required: true
+  label:
+    en_US: Video Duration (seconds)
+    zh_Hans: 生成视频秒数
+  human_description:
+    en_US: 'Choose 6, 10, 15, 20, 25 or 30 seconds. Reference price: 6 Turan coins
+      per second; final pricing is confirmed at submission.'
+    zh_Hans: 图然页面已确认：6、10、15、20、25、30秒。参考6燃币／秒，提交前实时核价。
+  llm_description: 'Choose 6, 10, 15, 20, 25 or 30 seconds. Reference price: 6 Turan
+    coins per second; final pricing is confirmed at submission.'
+  default: '10'
+  options:
+  - value: '6'
+    label:
+      en_US: 6 seconds
+      zh_Hans: 6秒
+  - value: '10'
+    label:
+      en_US: 10 seconds
+      zh_Hans: 10秒
+  - value: '15'
+    label:
+      en_US: 15 seconds
+      zh_Hans: 15秒
+  - value: '20'
+    label:
+      en_US: 20 seconds
+      zh_Hans: 20秒
+  - value: '25'
+    label:
+      en_US: 25 seconds
+      zh_Hans: 25秒
+  - value: '30'
+    label:
+      en_US: 30 seconds
+      zh_Hans: 30秒
+- name: requirement_2
+  type: string
+  form: llm
+  required: true
+  label:
+    en_US: 'Aspect ratio (default: 9:16)'
+    zh_Hans: 尺寸比例（默认 9:16）
+  human_description:
+    en_US: 'Allowed: 1:1, 2:3, 3:2, 3:4, 4:3, 9:16, 16:9.'
+    zh_Hans: 可填：1:1、2:3、3:2、3:4、4:3、9:16、16:9。
+  llm_description: 'Allowed: 1:1, 2:3, 3:2, 3:4, 4:3, 9:16, 16:9.'
+  default: '9:16'
+  options:
+  - value: '1:1'
+    label:
+      en_US: '1:1'
+      zh_Hans: '1:1'
+  - value: '2:3'
+    label:
+      en_US: '2:3'
+      zh_Hans: '2:3'
+  - value: '3:2'
+    label:
+      en_US: '3:2'
+      zh_Hans: '3:2'
+  - value: '3:4'
+    label:
+      en_US: '3:4'
+      zh_Hans: '3:4'
+  - value: '4:3'
+    label:
+      en_US: '4:3'
+      zh_Hans: '4:3'
+  - value: '9:16'
+    label:
+      en_US: '9:16'
+      zh_Hans: '9:16'
+  - value: '16:9'
+    label:
+      en_US: '16:9'
+      zh_Hans: '16:9'
+- name: output_spec
+  type: string
+  form: llm
+  required: false
+  label:
+    en_US: 'Specification (default: 视频)'
+    zh_Hans: 视频规格（默认 视频）
+  human_description:
+    en_US: 'Allowed: 视频 (Video).       Reference prices: Video: 6 coins/second (confirmed at submission).'
+    zh_Hans: '可填：视频。       参考价格：视频 6 燃币／秒（以提交时为准）。'
+  llm_description: 'Allowed: 视频 (Video).     Reference prices: Video: 6 coins/second (confirmed at submission).'
+  default: 视频
+  options:
+  - value: 视频
+    label:
+      en_US: Video
+      zh_Hans: 视频
+output_schema:
+  type: object
+  properties:
+    task_id:
+      type: string
+    workflow_code:
+      type: string
+    status:
+      type: string
+    result_count:
+      type: number
+extra:
+  python:
+    source: tools/common_product.py

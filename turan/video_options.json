@@ -1,0 +1,10 @@
+{
+  "common_product": {
+    "duration_seconds": {
+      "values": ["6", "10", "15", "20", "25", "30"],
+      "default": "10",
+      "checked_on": "2026-10-22",
+      "source": "POC video-duration dropdown screenshot supplied by the user: codex-clipboard-49488b63-d2d6-4217-bf6c-eed98acdfe31.png"
+    }
+  }
+}

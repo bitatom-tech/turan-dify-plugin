@@ -1,0 +1,155 @@
+identity:
+  author: turan
+  name: change_color
+  label:
+    en_US: Design Materials | Garment Recoloring
+    zh_Hans: 设计素材｜一键改款色
+description:
+  human:
+    en_US: Recolor garments using a hex color or a color reference image. Provide
+      exactly one color source.
+    zh_Hans: 通过目标颜色值或颜色参考图调整服装配色，快速预览不同色款。颜色值与参考图二选一。
+  llm: Recolor garments using a hex color or a color reference image. Provide exactly
+    one color source.
+parameters:
+- name: source_image
+  type: file
+  form: llm
+  required: true
+  label:
+    en_US: Source Image for Recoloring
+    zh_Hans: 需改色原始图
+  human_description:
+    en_US: Upload one PNG, JPEG or WebP image, up to 20 MiB.
+    zh_Hans: 上传1张图片，支持PNG/JPEG/WebP，单张最多20MiB。
+  llm_description: Upload one PNG, JPEG or WebP image, up to 20 MiB.
+- name: color_reference_image
+  type: file
+  form: llm
+  required: false
+  label:
+    en_US: Color reference (choose reference OR color)
+    zh_Hans: 颜色参考图（与颜色值二选一）
+  human_description:
+    en_US: PNG, JPEG or WebP, at most 20 MiB. Leave target_color empty when supplying
+      this image.
+    zh_Hans: 支持 PNG/JPEG/WebP，单张最多20MiB；上传参考图时必须清空目标颜色值。
+  llm_description: PNG, JPEG or WebP, at most 20 MiB. Leave target_color empty when
+    supplying this image.
+- name: target_color
+  type: string
+  form: llm
+  required: false
+  label:
+    en_US: Target color (#RRGGBB; choose color OR reference)
+    zh_Hans: 目标颜色值（与参考图二选一）
+  human_description:
+    en_US: Provide exactly one of target_color (#RRGGBB) or color_reference_image.
+      No default color is injected.
+    zh_Hans: '与颜色参考图必须二选一，格式 #RRGGBB，例如 #8e2929；使用参考图时留空，不再默认填白色。'
+  llm_description: Provide exactly one of target_color (#RRGGBB) or color_reference_image.
+    No default color is injected.
+- name: instructions
+  type: string
+  form: llm
+  required: false
+  label:
+    en_US: Additional recoloring instructions
+    zh_Hans: 补充改色要求
+  human_description:
+    en_US: Optional business instruction, at most 4000 characters.
+    zh_Hans: 可选业务要求，最多4000字符。
+  llm_description: Optional business instruction, at most 4000 characters.
+- name: aspect_ratio
+  type: string
+  form: llm
+  required: false
+  label:
+    en_US: 'Aspect ratio (default: 1:1)'
+    zh_Hans: 尺寸比例（默认 1:1）
+  human_description:
+    en_US: 'Allowed: 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9, auto (automatic).'
+    zh_Hans: 可填：1:1、2:3、3:2、3:4、4:3、4:5、5:4、9:16、16:9、21:9、auto（自动）。
+  llm_description: 'Allowed: 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9,
+    auto (automatic).'
+  default: '1:1'
+  options:
+  - value: '1:1'
+    label:
+      en_US: '1:1'
+      zh_Hans: '1:1'
+  - value: '2:3'
+    label:
+      en_US: '2:3'
+      zh_Hans: '2:3'
+  - value: '3:2'
+    label:
+      en_US: '3:2'
+      zh_Hans: '3:2'
+  - value: '3:4'
+    label:
+      en_US: '3:4'
+      zh_Hans: '3:4'
+  - value: '4:3'
+    label:
+      en_US: '4:3'
+      zh_Hans: '4:3'
+  - value: '4:5'
+    label:
+      en_US: '4:5'
+      zh_Hans: '4:5'
+  - value: '5:4'
+    label:
+      en_US: '5:4'
+      zh_Hans: '5:4'
+  - value: '9:16'
+    label:
+      en_US: '9:16'
+      zh_Hans: '9:16'
+  - value: '16:9'
+    label:
+      en_US: '16:9'
+      zh_Hans: '16:9'
+  - value: '21:9'
+    label:
+      en_US: '21:9'
+      zh_Hans: '21:9'
+  - value: auto
+    label:
+      en_US: Automatic
+      zh_Hans: 自动比例
+- name: output_spec
+  type: string
+  form: llm
+  required: false
+  label:
+    en_US: 'Specification (default: standard)'
+    zh_Hans: 出图规格（默认 standard）
+  human_description:
+    en_US: 'Allowed: standard (Standard), hd (HD).       Reference prices: Standard: 14 coins; HD: 25 coins (confirmed at submission).'
+    zh_Hans: '可填：standard（普通图）、hd（高清图）。       参考价格：普通图 14 燃币；高清图 25 燃币（以提交时为准）。'
+  llm_description: 'Allowed: standard (Standard), hd (HD).     Reference prices: Standard: 14 coins; HD: 25 coins (confirmed at submission).'
+  default: standard
+  options:
+  - value: standard
+    label:
+      en_US: Standard
+      zh_Hans: 普通图
+  - value: hd
+    label:
+      en_US: HD
+      zh_Hans: 高清图
+output_schema:
+  type: object
+  properties:
+    task_id:
+      type: string
+    workflow_code:
+      type: string
+    status:
+      type: string
+    result_count:
+      type: number
+extra:
+  python:
+    source: tools/change_color.py

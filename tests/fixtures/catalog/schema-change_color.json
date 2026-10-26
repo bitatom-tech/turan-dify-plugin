@@ -1,0 +1,92 @@
+{
+  "workflowCode": "change_color",
+  "workflowName": "一键改款色",
+  "outputType": "IMAGE",
+  "avgTaskCostTime": 46,
+  "inputs": [
+    {
+      "formName": "7_____image",
+      "label": "需改色原始图",
+      "kind": "image",
+      "type": "image",
+      "required": true,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "8_____image",
+      "label": "目标颜色图",
+      "kind": "image",
+      "type": "image",
+      "required": false,
+      "defaultValue": null,
+      "description": "非必选，如果有目标颜色图可以上传",
+      "placeholder": "null"
+    },
+    {
+      "formName": "2_____aspectRatio",
+      "label": "尺寸比例",
+      "kind": "parameter",
+      "type": "select",
+      "required": false,
+      "defaultValue": "1:1",
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "2_____resolution",
+      "label": "分辨率",
+      "kind": "parameter",
+      "type": "select",
+      "required": false,
+      "defaultValue": "1k",
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "17_____颜色",
+      "label": "款色",
+      "kind": "parameter",
+      "type": "color",
+      "required": false,
+      "defaultValue": "#ffffff",
+      "description": "null",
+      "placeholder": "null"
+    },
+    {
+      "formName": "6_____text",
+      "label": "默认提示词",
+      "kind": "parameter",
+      "type": "textarea",
+      "required": false,
+      "defaultValue": null,
+      "description": "null",
+      "placeholder": "修改图中的产品主体颜色"
+    },
+    {
+      "formName": "18_____text",
+      "label": "提示词",
+      "kind": "parameter",
+      "type": "textarea",
+      "required": false,
+      "defaultValue": null,
+      "description": "修改图中的产品主体颜色",
+      "placeholder": "修改图中的产品主体颜色"
+    }
+  ],
+  "priceOptions": [
+    {
+      "priceType": "11",
+      "priceTypeLabel": "普通图",
+      "consumeCoins": "14.00",
+      "unit": "燃币"
+    },
+    {
+      "priceType": "12",
+      "priceTypeLabel": "高清图",
+      "consumeCoins": "25.00",
+      "unit": "燃币"
+    }
+  ]
+}

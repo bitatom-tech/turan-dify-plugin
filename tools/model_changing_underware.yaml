@@ -1,0 +1,80 @@
+identity:
+  author: turan
+  name: model_changing_underware
+  label:
+    en_US: Model Tools | Model Underwear Change
+    zh_Hans: 模特工具｜模特换内衣
+description:
+  human:
+    en_US: Create underwear presentation images using garment and model references
+      with fit instructions.
+    zh_Hans: 结合内衣产品图、模特参考与穿戴要求，生成内衣上身展示图。
+  llm: Create underwear presentation images using garment and model references with
+    fit instructions.
+parameters:
+- name: image_1
+  type: file
+  form: llm
+  required: true
+  label:
+    en_US: Underwear Image
+    zh_Hans: 内衣图
+  human_description:
+    en_US: Upload one PNG, JPEG or WebP image, up to 20 MiB.
+    zh_Hans: 上传1张图片，支持PNG/JPEG/WebP，单张最多20MiB。
+  llm_description: Upload one PNG, JPEG or WebP image, up to 20 MiB.
+- name: image_2
+  type: file
+  form: llm
+  required: true
+  label:
+    en_US: Model Image
+    zh_Hans: 模特图
+  human_description:
+    en_US: Upload one PNG, JPEG or WebP image, up to 20 MiB.
+    zh_Hans: 上传1张图片，支持PNG/JPEG/WebP，单张最多20MiB。
+  llm_description: Upload one PNG, JPEG or WebP image, up to 20 MiB.
+- name: requirement_1
+  type: string
+  form: llm
+  required: false
+  label:
+    en_US: Prompt
+    zh_Hans: 提示词
+  human_description:
+    en_US: Describe your preferences for prompt. Keep the default or customize it
+      to suit your project.
+    zh_Hans: 根据创作需求填写，可保留默认值或自行调整。
+  llm_description: Describe your preferences for prompt. Keep the default or customize
+    it to suit your project.
+- name: output_spec
+  type: string
+  form: llm
+  required: false
+  label:
+    en_US: 'Specification (default: 普通图)'
+    zh_Hans: 出图规格（默认 普通图）
+  human_description:
+    en_US: 'Allowed: 普通图 (Standard Image).       Reference prices: Standard Image: 14 coins (confirmed at submission).'
+    zh_Hans: '可填：普通图。       参考价格：普通图 14 燃币（以提交时为准）。'
+  llm_description: 'Allowed: 普通图 (Standard Image).     Reference prices: Standard Image: 14 coins (confirmed at submission).'
+  default: 普通图
+  options:
+  - value: 普通图
+    label:
+      en_US: Standard Image
+      zh_Hans: 普通图
+output_schema:
+  type: object
+  properties:
+    task_id:
+      type: string
+    workflow_code:
+      type: string
+    status:
+      type: string
+    result_count:
+      type: number
+extra:
+  python:
+    source: tools/model_changing_underware.py

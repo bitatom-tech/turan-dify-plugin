@@ -1,0 +1,12 @@
+.venv/
+.git/
+__pycache__/
+.pytest_cache/
+.env
+tests/
+scripts/
+AGENTS.md
+pytest.ini
+requirements-dev.txt
+test-results/
+*.difypkg

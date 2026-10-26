@@ -1,0 +1,134 @@
+identity:
+  author: turan
+  name: partial_ai_2
+  label:
+    en_US: Pattern Tools | Local Image Editing V2
+    zh_Hans: 图案工具｜局部重绘v2
+description:
+  human:
+    en_US: Refine specific image content using a source image, reference images and
+      written instructions.
+    zh_Hans: 结合原图、参考图片与文字要求，对指定内容进行局部重绘，完成有针对性的创意调整。
+  llm: Refine specific image content using a source image, reference images and written
+    instructions.
+parameters:
+- name: image_1
+  type: file
+  form: llm
+  required: true
+  label:
+    en_US: Source Image
+    zh_Hans: 原图
+  human_description:
+    en_US: Upload one PNG, JPEG or WebP image, up to 20 MiB.
+    zh_Hans: 上传1张图片，支持PNG/JPEG/WebP，单张最多20MiB。
+  llm_description: Upload one PNG, JPEG or WebP image, up to 20 MiB.
+- name: reference_files
+  type: files
+  form: llm
+  required: false
+  label:
+    en_US: Reference Image (up to 7 images)
+    zh_Hans: 参考图（最多7张）
+  human_description:
+    en_US: Upload zero to 7 reference images in one list. Images are assigned in the
+      displayed order. PNG, JPEG or WebP, up to 20 MiB each.
+    zh_Hans: 在同一个入口上传0至7张图片，按列表顺序对应官网图片位置。只补充一张时上传一张即可。支持PNG/JPEG/WebP，单张最多20MiB。
+  llm_description: Upload zero to 7 reference images in one list. Images are assigned
+    in the displayed order. PNG, JPEG or WebP, up to 20 MiB each.
+  min: 0
+  max: 7
+- name: requirement_1
+  type: string
+  form: llm
+  required: true
+  label:
+    en_US: Custom Prompt
+    zh_Hans: 用户提示词
+  human_description:
+    en_US: Describe your preferences for custom prompt. Keep the default or customize
+      it to suit your project.
+    zh_Hans: 根据创作需求填写，可保留默认值或自行调整。
+  llm_description: Describe your preferences for custom prompt. Keep the default or
+    customize it to suit your project.
+- name: aspect_ratio
+  type: string
+  form: llm
+  required: false
+  label:
+    en_US: 'Aspect ratio (default: empty)'
+    zh_Hans: 尺寸比例（默认 empty）
+  human_description:
+    en_US: 'Allowed: empty (unspecified), 1:1, 2:3, 3:2, 4:5, 5:4, 9:16, 16:9.'
+    zh_Hans: 可填：empty（不指定）、1:1、2:3、3:2、4:5、5:4、9:16、16:9。
+  llm_description: 'Allowed: empty (unspecified), 1:1, 2:3, 3:2, 4:5, 5:4, 9:16, 16:9.'
+  default: empty
+  options:
+  - value: empty
+    label:
+      en_US: empty
+      zh_Hans: empty
+  - value: '1:1'
+    label:
+      en_US: '1:1'
+      zh_Hans: '1:1'
+  - value: '2:3'
+    label:
+      en_US: '2:3'
+      zh_Hans: '2:3'
+  - value: '3:2'
+    label:
+      en_US: '3:2'
+      zh_Hans: '3:2'
+  - value: '4:5'
+    label:
+      en_US: '4:5'
+      zh_Hans: '4:5'
+  - value: '5:4'
+    label:
+      en_US: '5:4'
+      zh_Hans: '5:4'
+  - value: '9:16'
+    label:
+      en_US: '9:16'
+      zh_Hans: '9:16'
+  - value: '16:9'
+    label:
+      en_US: '16:9'
+      zh_Hans: '16:9'
+- name: output_spec
+  type: string
+  form: llm
+  required: false
+  label:
+    en_US: 'Specification (default: 普通图)'
+    zh_Hans: 出图规格（默认 普通图）
+  human_description:
+    en_US: 'Allowed: 普通图 (Standard Image), 高清图 (HD Image).       Reference prices: Standard Image: 14 coins; HD Image: 25 coins (confirmed at
+      submission).'
+    zh_Hans: '可填：普通图、高清图。       参考价格：普通图 14 燃币；高清图 25 燃币（以提交时为准）。'
+  llm_description: 'Allowed: 普通图 (Standard Image), 高清图 (HD Image).     Reference prices: Standard Image: 14 coins; HD Image: 25 coins (confirmed at submission).'
+  default: 普通图
+  options:
+  - value: 普通图
+    label:
+      en_US: Standard Image
+      zh_Hans: 普通图
+  - value: 高清图
+    label:
+      en_US: HD Image
+      zh_Hans: 高清图
+output_schema:
+  type: object
+  properties:
+    task_id:
+      type: string
+    workflow_code:
+      type: string
+    status:
+      type: string
+    result_count:
+      type: number
+extra:
+  python:
+    source: tools/partial_ai_2.py
