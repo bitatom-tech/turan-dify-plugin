@@ -53,7 +53,7 @@ def write(path, value):
 
 def main():
     write("manifest.yaml", {"version": VERSION, "type": "plugin", "author": AUTHOR, "name": "turan", "label": label("Turan", "Turan 图然"),
-        "repo": "https://github.com/bitatom-tech/turan-dify-plugin", "contact": "https://github.com/bitatom-tech/turan-dify-plugin/issues",
+        "repo": "https://github.com/bitatom-tech/turan-dify-plugin", "contact": "bitatom_tech@163.com",
         "description": label("Turan outfit, color and reference-poster tools with task recovery.", "图然 换装、改色、参考海报迁移与任务结果恢复。"), "icon": "icon.png", "created_at": "2026-10-21T00:00:00Z",
         "resource": {"memory": 268435456, "permission": {"storage": {"enabled": True, "size": 10485760}}},
         "plugins": {"tools": ["provider/turan.yaml"]}, "meta": {"version": "0.0.1", "arch": ["amd64", "arm64"], "runner": {"language": "python", "version": "3.12", "entrypoint": "main"}},

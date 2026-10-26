@@ -1,5 +1,7 @@
 .venv/
 .git/
+.gitignore
+.difyignore
 __pycache__/
 .pytest_cache/
 .env

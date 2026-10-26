@@ -81,3 +81,5 @@ API Key 只发往受限制的图然 API 与上传接口，下载结果时不会�
 ## 支持与反馈
 
 账户及服务信息：[turan.design](https://turan.design/)。插件问题与建议请提交至 [GitHub Issues](https://github.com/bitatom-tech/turan-dify-plugin/issues)，请勿在公开反馈中填写 API Key 或上传私人图片。
+
+联系邮箱：[bitatom_tech@163.com](mailto:bitatom_tech@163.com)。

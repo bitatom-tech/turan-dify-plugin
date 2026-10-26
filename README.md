@@ -74,6 +74,8 @@ The plugin keeps only the latest task-recovery record per credential namespace i
 
 Report bugs and request features through [GitHub Issues](https://github.com/bitatom-tech/turan-dify-plugin/issues). Do not include API keys or personal images in public reports.
 
+Contact: [bitatom_tech@163.com](mailto:bitatom_tech@163.com).
+
 ## Build and test
 
 Python 3.12 is required. Install runtime and test dependencies, then run the offline test suite:

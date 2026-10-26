@@ -3,7 +3,7 @@ type: plugin
 author: bitatom
 name: turan
 repo: https://github.com/bitatom-tech/turan-dify-plugin
-contact: https://github.com/bitatom-tech/turan-dify-plugin/issues
+contact: bitatom_tech@163.com
 label:
   en_US: Turan
   zh_Hans: Turan 图然

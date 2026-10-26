@@ -50,4 +50,4 @@ Removing the plugin or its authorization does not cancel an already submitted ta
 
 ## Contact
 
-For Turan account or service-data requests, use the contact methods in the [Turan service privacy policy](https://turan.design/login/register). For plugin issues, use [GitHub Issues](https://github.com/bitatom-tech/turan-dify-plugin/issues). Public issue reports must not include API Keys, private images or other personal information.
+For Turan account or service-data requests, use the contact methods in the [Turan service privacy policy](https://turan.design/login/register). For plugin issues, email [bitatom_tech@163.com](mailto:bitatom_tech@163.com) or use [GitHub Issues](https://github.com/bitatom-tech/turan-dify-plugin/issues). Public issue reports must not include API Keys, private images or other personal information.
