@@ -4,6 +4,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
+AUTHOR = "bitatom"
 
 
 def label(en, zh):
@@ -51,21 +52,21 @@ def write(path, value):
 
 
 def main():
-    write("manifest.yaml", {"version": VERSION, "type": "plugin", "author": "turan", "name": "turan", "label": label("Turan", "Turan 图然"),
+    write("manifest.yaml", {"version": VERSION, "type": "plugin", "author": AUTHOR, "name": "turan", "label": label("Turan", "Turan 图然"),
         "repo": "https://github.com/bitatom-tech/turan-dify-plugin", "contact": "https://github.com/bitatom-tech/turan-dify-plugin/issues",
         "description": label("Turan outfit, color and reference-poster tools with task recovery.", "图然 换装、改色、参考海报迁移与任务结果恢复。"), "icon": "icon.png", "created_at": "2026-10-21T00:00:00Z",
         "resource": {"memory": 268435456, "permission": {"storage": {"enabled": True, "size": 10485760}}},
         "plugins": {"tools": ["provider/turan.yaml"]}, "meta": {"version": "0.0.1", "arch": ["amd64", "arm64"], "runner": {"language": "python", "version": "3.12", "entrypoint": "main"}},
         "privacy": "PRIVACY.md", "tags": ["image", "design"],
         "network": {"domains": ["turan.design", "www.turan.design", "rh-hk-images.xiaoyaoyou.com"]}})
-    write("provider/turan.yaml", {"identity": {"author": "turan", "name": "turan", "label": label("Turan", "Turan 图然"), "description": label("Connect your Turan account.", "连接你自己的 Turan 账户。"), "icon": "icon.png", "tags": ["image", "design"]},
+    write("provider/turan.yaml", {"identity": {"author": AUTHOR, "name": "turan", "label": label("Turan", "Turan 图然"), "description": label("Connect your Turan account.", "连接你自己的 Turan 账户。"), "icon": "icon.png", "tags": ["image", "design"]},
         "credentials_for_provider": {"api_key": {"type": "secret-input", "required": True, "label": label("Turan API Key", "Turan API Key"), "placeholder": label("Enter your Turan API Key", "填写你自己的 Turan API Key"), "help": label("Get your key from Turan", "在 Turan 获取 Key"), "url": "https://turan.design/user-center/api-key"}},
         "tools": [f"tools/{code}.yaml" for code in TOOLS], "extra": {"python": {"source": "provider/turan.py"}}})
     for code, (en, zh, params) in TOOLS.items():
         from catalog_copy import PRODUCTS
         description = "Retrieve images or video from an existing task ID after an interrupted workflow, without starting a new generation." if code == "recover_task_result" else PRODUCTS[code][1]
         zh_description = "通过已有任务 ID 取回图片或视频，便于工作流异常后恢复结果，无需重新生成。" if code == "recover_task_result" else PRODUCTS[code][2]
-        write(f"tools/{code}.yaml", {"identity": {"author": "turan", "name": code, "label": label(en, zh)}, "description": {"human": label(description, zh_description), "llm": description}, "parameters": params,
+        write(f"tools/{code}.yaml", {"identity": {"author": AUTHOR, "name": code, "label": label(en, zh)}, "description": {"human": label(description, zh_description), "llm": description}, "parameters": params,
             "output_schema": {"type": "object", "properties": {"task_id": {"type": "string"}, "workflow_code": {"type": "string"}, "status": {"type": "string"}, "result_count": {"type": "number"}}}, "extra": {"python": {"source": f"tools/{code}.py"}}})
 
 
